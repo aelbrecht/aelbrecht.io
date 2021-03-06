@@ -1,0 +1,182 @@
+.landing-banner {
+    background-image: url("https://static.aelbrecht.io/portfolio/snow-banner-v5.jpg");
+
+    height: 65vh;
+    background-size: auto 100%;
+    background-position: 30% center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 660px) {
+    .landing-banner {
+        background-image: none;
+    }
+}
+
+.flex-columns {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-inner-column {
+    width: 40%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-full-column {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+.w100 {
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .flex-inner-column {
+        width: 100%;
+    }
+
+    .flex-full-column {
+        width: 100%;
+    }
+
+    .flex-inner-column.hide-mobile {
+        display: none;
+    }
+}
+
+
+.flex-outer-column {
+    flex-grow: 1;
+    min-height: 50vh;
+}
+
+@media screen and (max-width: 1000px) {
+    .flex-outer-column {
+        display: none;
+    }
+}
+
+.element-name {
+    padding-left: 50%;
+    background-image: url("./name-frame.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    color: black;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+
+@media screen and (max-width: 740px) {
+    .element-name {
+        padding-left: 40%;
+        background-position: 40%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .element-name {
+        background-image: none;
+        padding-left: 0;
+        justify-content: center;
+    }
+}
+
+.flex-center {
+    align-self: center;
+}
+
+.element-name .flex-center {
+    padding: 7.8rem 2rem 2rem;
+}
+
+@media screen and (max-width: 660px) {
+    .element-name .flex-center {
+        padding-top: 2rem;
+    }
+
+}
+
+.element-name .name {
+    margin: 0;
+    padding-bottom: 0.5rem;
+    font-size: 2.7rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    line-height: 2.3rem;
+}
+
+.element-name .flex-center .lead:first-child {
+    color: #0c2461;
+}
+
+.element-name .lead {
+    font-size: 1rem;
+    font-variant: small-caps;
+}
+
+.page-filler {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+}
+
+@media screen and (max-width: 660px) {
+    .page-filler {
+        height: 100vh;
+    }
+}
+
+.page-filler-70 {
+    height: 90vh;
+}
+
+.banner-link {
+    text-decoration: none;
+    color: #0a3d62;
+}
+
+.page-filler .flex-columns {
+    align-self: center;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact .contact-feature a {
+    color: #0a3d62;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    display: block;
+}
+
+.contact .contact-feature .hide-mobile {
+    padding-left: 0.5rem;
+}
+
+@media screen and (max-width: 780px) {
+
+    .contact .contact-feature {
+        text-align: center;
+    }
+
+    .contact .hide-mobile {
+        font-size: 0;
+    }
+}
