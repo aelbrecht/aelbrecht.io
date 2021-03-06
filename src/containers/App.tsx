@@ -1,5 +1,17 @@
-import {faFacebookMessenger, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {
+    faCss3,
+    faDocker,
+    faFacebookMessenger,
+    faGithub,
+    faHtml5,
+    faJava, faJs,
+    faLinkedin,
+    faNodeJs,
+    faPhp,
+    faPython,
+    faReact
+} from '@fortawesome/free-brands-svg-icons';
+import {faCode, faEnvelope, faTerminal} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React, {FC} from 'react';
 import './App.scss';
@@ -56,6 +68,50 @@ const MenuItem: FC<MenuItemInterface> = p => (
         <span style={{fontSize: "0.8rem"}}>{p.prefix}</span> {p.name}
     </a>
 )
+
+type BadgeType = [string, number, any]
+
+const activeSkills: BadgeType[] = [
+    ["React", 4, faReact],
+    ["TypeScript", 4, "typescript"],
+    ["JavaScript", 3, faJs],
+    ["CSS/SCSS", 3, faCss3],
+    ["Node.js", 3, faNodeJs],
+    ["Python", 4, faPython],
+    ["Go", 4, "go"],
+    ["HTML5", 3, faHtml5],
+    ["Docker & Docker Compose", 2, faDocker],
+    ["MongoDB", 2, "mongodb"],
+    ["PostgreSQL", 2, "postgres"],
+    ["Google Analytics", 2, "analytics"],
+    ["Shell Scripting", 1, "unix"],
+    ["S3", 1, "s3"],
+]
+
+const passiveSkills: BadgeType[] = [
+    ["Unix", 3, ""],
+    ["JetBrains Suite", 3, ""],
+    ["Final Cut Pro", 2, ""],
+    ["Adobe Suite", 2, ""],
+    ["Office Suite", 2, ""],
+    ["Unit Testing", 2, ""],
+    ["Autodesk Fusion", 1, ""],
+]
+
+const pastSkills: BadgeType[] = [
+    ["C", 2, ""],
+    ["Java", 2, ""],
+    ["Arduino", 2, ""],
+    ["C++", 1, ""],
+    ["Assembly", 1, ""],
+    ["Google Optimize", 1, ""],
+]
+
+const otherSkills: BadgeType[] = [
+    ["MySQL", 2, ""],
+    ["PHP", 2, ""],
+    ["jQuery", 2, ""],
+]
 
 const App: FC = () => (
     <div>
@@ -183,13 +239,62 @@ const App: FC = () => (
                 <div className="flex-full-column p2">
                     <div className="w100">
                         <h2>Skills</h2>
+                        <h3 className="mb-0">Current Skills</h3>
+                        <div className="text-lead">
+                            Used in the past year.
+                        </div>
+                        {skillBadges(activeSkills)}
+                        <h3 className="mb-0">Passive Skills</h3>
+                        <div className="text-lead">
+                            Actively used programs or environments.
+                        </div>
+                        {skillBadges(passiveSkills)}
+                        <h3 className="mb-0">Past Skills</h3>
+                        <div className="text-lead">
+                            Used for a project at some point.
+                        </div>
+                        {skillBadges(pastSkills)}
+                        <h3 className="mb-0">Other skill</h3>
+                        <div className="text-lead">
+                            Used for project in the past but moved on from.
+                        </div>
+                        {skillBadges(otherSkills)}
                     </div>
                 </div>
             </div>
         </div>
 
+
+        <div className="page-filler" id="experience">
+        </div>
+
     </div>
 )
+
+const skillBadgeIcon = (level: number) => {
+    const rings = []
+
+
+}
+
+const skillBadges = (badges: BadgeType[]) => {
+    const results = badges.map((b) => (
+        <div className="single-skill">
+            {typeof b[2] === "string" ? ((b[2] === "") ? null :
+                    (<div className={"skill-icon icon-" + b[2]}/>)
+            ) : (
+                <FontAwesomeIcon style={{fontSize: "0.85rem", marginRight: "0.5rem"}} icon={b[2]}/>
+            )}
+            {b[0]}
+        </div>
+
+    ))
+    return (
+        <div className="skill-badges">
+            {results}
+        </div>
+    )
+}
 
 const Portrait = () => (
     <div className="portrait">

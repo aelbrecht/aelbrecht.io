@@ -13,6 +13,15 @@
   }
 }
 
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.text-lead {
+  font-size: 0.9rem;
+  color: #333;
+}
+
 h2 {
   font-weight: 200;
   font-size: 2rem;
@@ -362,6 +371,62 @@ a {
 
   .lang-stat.lang-bad {
     color: #e58e26;
+  }
+
+}
+
+.skill-badges {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem -0.5rem;
+
+  .single-skill {
+    min-width: 20px;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    margin: 0.2rem;
+  }
+
+  .skill-icon {
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: inline-block;
+    margin-right: 0.3rem;
+    background-size: contain;
+    margin-bottom: -2px;
+  }
+
+  .icon-mongodb {
+    background-image: url("./icons/mongodb.svg");
+  }
+
+  .icon-typescript {
+    background-image: url("./icons/typescript.svg");
+  }
+
+  .icon-postgres {
+    background-image: url("./icons/postgres.svg");
+  }
+
+  .icon-analytics {
+    background-image: url("./icons/analytics.svg");
+  }
+
+  .icon-s3 {
+    background-image: url("./icons/s3.svg");
+  }
+
+  .icon-unix {
+    background-image: url("./icons/unix.svg");
+  }
+
+  .icon-go {
+    background-image: url("./icons/go.svg");
   }
 
 }
