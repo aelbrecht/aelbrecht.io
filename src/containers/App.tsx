@@ -84,7 +84,7 @@ function App() {
 
             <ContactBar/>
 
-            <div className="page-filler">
+            <div className="page-filler" id="about-me">
                 <div className="flex-columns ">
                     <div className="flex-inner-column">
                         <h2>About me</h2>
