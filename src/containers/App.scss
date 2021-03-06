@@ -205,7 +205,7 @@ h3 {
 }
 
 .contact {
-  margin-bottom: 1rem;
+  margin-bottom: 5vh;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -239,27 +239,33 @@ a {
 }
 
 .portrait {
-
-}
-
-.portrait img {
-  width: 100%;
   max-width: 400px;
-}
 
-.portrait .portrait-description {
-  padding: 0.8rem 0;
-}
+  img {
+    width: 100%;
+    max-width: 400px;
+  }
 
-.portrait .portrait-description .portrait-name {
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-align: right;
-}
+  .portrait-description {
+    padding: 0.8rem 0;
 
-.portrait .portrait-description .portrait-birthdate {
-  text-align: right;
-  font-size: 0.9rem;
+    .portrait-name {
+      font-size: 1.2rem;
+      font-weight: 400;
+      text-align: right;
+    }
+
+    .portrait-birthdate {
+      text-align: right;
+      font-size: 0.9rem;
+    }
+  }
+
+  .profile-description {
+    p {
+      text-align: justify;
+    }
+  }
 }
 
 .education-segment {
@@ -303,6 +309,8 @@ a {
 
 .experience-segment {
 
+  margin-bottom: 2rem;
+
   .exp-block {
     background-size: 40px 40px;
     background-repeat: no-repeat;
@@ -333,4 +341,27 @@ a {
   .exp-holiday-suites {
     background-image: url("https://static.aelbrecht.io/portfolio/holiday-suites.jpg");
   }
+}
+
+.language-segment {
+
+  margin-bottom: 2rem;
+
+  .lang-stat {
+    font-variant: small-caps;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    padding-bottom: 2px;
+    display: block;
+  }
+
+  .lang-stat.lang-good {
+    color: #079992;
+    font-weight: bold;
+  }
+
+  .lang-stat.lang-bad {
+    color: #e58e26;
+  }
+
 }
