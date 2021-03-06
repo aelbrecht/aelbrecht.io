@@ -1,0 +1,336 @@
+.landing-banner {
+  background-image: url("https://static.aelbrecht.io/portfolio/snow-banner.jpg");
+
+  height: 65vh;
+  background-size: auto 100%;
+  background-position: 30% center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 660px) {
+  .landing-banner {
+    background-image: none;
+  }
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  h2 {
+    margin-top: 0;
+  }
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+.flex-columns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-inner-column {
+  width: 40%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-inner-column-70 {
+  width: 70%;
+  max-width: 520px;
+}
+
+.flex-inner-column-30 {
+  width: 30%;
+  max-width: 520px;
+}
+
+.flex-full-column {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+.w320px {
+  width: 280px;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.p2 {
+  padding: 2rem 2rem 0 2rem;
+}
+
+.flex-column {
+  width: 50%;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .flex-column {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .flex-inner-column {
+    width: 100%;
+  }
+
+  .flex-full-column {
+    width: 100%;
+  }
+
+  .flex-inner-column.hide-mobile {
+    display: none;
+  }
+}
+
+
+.flex-outer-column {
+  flex-grow: 1;
+  min-height: 50vh;
+}
+
+@media screen and (max-width: 1000px) {
+  .flex-outer-column {
+    display: none;
+  }
+}
+
+.element-name {
+  padding-left: 50%;
+  background-image: url("./name-frame.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  color: black;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+}
+
+@media screen and (max-width: 740px) {
+  .element-name {
+    padding-left: 40%;
+    background-position: 40%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .element-name {
+    background-image: none;
+    padding-left: 0;
+    justify-content: center;
+  }
+}
+
+.flex-center {
+  align-self: center;
+}
+
+.element-name .flex-center {
+  padding: 5.9rem 2rem 2rem;
+}
+
+@media screen and (max-width: 660px) {
+  .element-name .flex-center {
+    padding-top: 2rem;
+  }
+
+}
+
+.element-name .name {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-size: 2.7rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  line-height: 2.3rem;
+}
+
+.element-name .flex-center .lead:first-child {
+  color: #0c2461;
+}
+
+.element-name .lead {
+  font-size: 1rem;
+  font-variant: small-caps;
+}
+
+.page-padding {
+  padding: 20px;
+}
+
+.page-filler {
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+}
+
+@media screen and (max-width: 660px) {
+  .page-filler {
+    min-height: 100vh;
+  }
+}
+
+.page-filler-70 {
+  min-height: 90vh;
+}
+
+.banner-link {
+  text-decoration: none;
+  color: #0a3d62;
+}
+
+.page-filler .flex-columns {
+  align-self: center;
+}
+
+.contact {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contact .contact-feature a {
+  color: #0a3d62;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  display: block;
+}
+
+
+a {
+  color: #0a3d62 !important;
+}
+
+.contact .contact-feature .hide-mobile {
+  padding-left: 0.5rem;
+}
+
+@media screen and (max-width: 780px) {
+
+  .contact .contact-feature {
+    text-align: center;
+  }
+
+  .contact .hide-mobile {
+    font-size: 0;
+  }
+}
+
+.portrait {
+
+}
+
+.portrait img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.portrait .portrait-description {
+  padding: 0.8rem 0;
+}
+
+.portrait .portrait-description .portrait-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: right;
+}
+
+.portrait .portrait-description .portrait-birthdate {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.education-segment {
+  margin-bottom: 2rem;
+  padding: 1.8rem 0 0.6rem 2.25rem;
+  background-image: url("./education-frame.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.education-segment .edu-block {
+  padding-bottom: 1rem;
+}
+
+.education-segment .edu-title {
+  font-size: 1.1rem;
+}
+
+.education-segment .edu-location {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.portrait-mobile {
+  display: none;
+}
+
+.portrait-desktop {
+  display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+  .portrait-mobile {
+    display: flex;
+  }
+
+  .portrait-desktop {
+    display: none;
+  }
+}
+
+.experience-segment {
+
+  .exp-block {
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .exp-title {
+    font-size: 1.1rem;
+  }
+
+  .exp-function {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  .exp-description {
+    text-align: justify;
+    max-width: 420px;
+    font-size: 0.9rem;
+    color: #222;
+  }
+
+  .exp-matthys-wines {
+    background-image: url("https://static.aelbrecht.io/portfolio/matthys-wines.png");
+  }
+
+  .exp-holiday-suites {
+    background-image: url("https://static.aelbrecht.io/portfolio/holiday-suites.jpg");
+  }
+}
