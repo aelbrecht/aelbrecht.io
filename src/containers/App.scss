@@ -71,6 +71,16 @@ h3 {
   justify-content: center;
 }
 
+.flex-full-column-70 {
+  max-width: 1090px;
+}
+
+@media screen and (max-width: 1000px) {
+  .flex-full-column-70 {
+    max-width: 520px;
+  }
+}
+
 .w320px {
   width: 280px;
 }
@@ -427,6 +437,30 @@ a {
 
   .icon-go {
     background-image: url("./icons/go.svg");
+  }
+
+  .skill-star {
+    font-size: 0.8rem;
+    margin-bottom: 1px;
+    color: #f6b93b;
+  }
+
+  .skill-level {
+    font-size: 0.5rem;
+    padding-left: 0.1rem;
+    margin-bottom: 2px;
+  }
+
+  .skill-level-3 {
+    color: #20bf6b;
+  }
+
+  .skill-level-2 {
+    color: #3867d6;
+  }
+
+  .skill-level-1 {
+    color: #4b6584;
   }
 
 }

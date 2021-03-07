@@ -1,17 +1,6 @@
-import {
-    faCss3,
-    faDocker,
-    faFacebookMessenger,
-    faGithub,
-    faHtml5,
-    faJava, faJs,
-    faLinkedin,
-    faNodeJs,
-    faPhp,
-    faPython,
-    faReact
-} from '@fortawesome/free-brands-svg-icons';
-import {faCode, faEnvelope, faTerminal} from '@fortawesome/free-solid-svg-icons';
+import {faFacebookMessenger, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import {faCircle, faEnvelope, faStar} from '@fortawesome/free-solid-svg-icons';
+import {faCircle as faCircleHollow} from '@fortawesome/free-regular-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React, {FC} from 'react';
 import './App.scss';
@@ -69,48 +58,49 @@ const MenuItem: FC<MenuItemInterface> = p => (
     </a>
 )
 
-type BadgeType = [string, number, any]
+type BadgeType = [string, number]
 
 const activeSkills: BadgeType[] = [
-    ["React", 4, faReact],
-    ["TypeScript", 4, "typescript"],
-    ["JavaScript", 3, faJs],
-    ["CSS/SCSS", 3, faCss3],
-    ["Node.js", 3, faNodeJs],
-    ["Python", 4, faPython],
-    ["Go", 4, "go"],
-    ["HTML5", 3, faHtml5],
-    ["Docker & Docker Compose", 2, faDocker],
-    ["MongoDB", 2, "mongodb"],
-    ["PostgreSQL", 2, "postgres"],
-    ["Google Analytics", 2, "analytics"],
-    ["Shell Scripting", 1, "unix"],
-    ["S3", 1, "s3"],
+    ["Go", 4],
+    ["Python", 4],
+    ["TypeScript", 4],
+    ["React", 4],
+    ["JavaScript", 3],
+    ["CSS/SCSS", 3],
+    ["Node.js", 3],
+    ["HTML", 3],
+    ["Docker", 2],
+    ["MongoDB", 2],
+    ["PostgreSQL", 2],
+    ["Google Analytics", 2],
+    ["Google Suite", 2],
+    ["Shell Scripting", 1],
+    ["S3", 1],
 ]
 
 const passiveSkills: BadgeType[] = [
-    ["Unix", 3, ""],
-    ["JetBrains Suite", 3, ""],
-    ["Final Cut Pro", 2, ""],
-    ["Adobe Suite", 2, ""],
-    ["Office Suite", 2, ""],
-    ["Unit Testing", 2, ""],
-    ["Autodesk Fusion", 1, ""],
+    ["Unix", 3],
+    ["JetBrains Suite", 3],
+    ["Final Cut Pro", 2],
+    ["Adobe Suite", 2],
+    ["Office Suite", 2],
+    ["Unit Testing", 2],
+    ["Autodesk Fusion", 1],
 ]
 
 const pastSkills: BadgeType[] = [
-    ["C", 2, ""],
-    ["Java", 2, ""],
-    ["Arduino", 2, ""],
-    ["C++", 1, ""],
-    ["Assembly", 1, ""],
-    ["Google Optimize", 1, ""],
+    ["C", 2],
+    ["Java", 2],
+    ["Arduino", 2],
+    ["C++", 1],
+    ["Assembly", 1],
+    ["Google Optimize", 1],
 ]
 
 const otherSkills: BadgeType[] = [
-    ["MySQL", 2, ""],
-    ["PHP", 2, ""],
-    ["jQuery", 2, ""],
+    ["MySQL", 2],
+    ["PHP", 2],
+    ["jQuery", 2],
 ]
 
 const App: FC = () => (
@@ -234,11 +224,37 @@ const App: FC = () => (
             </div>
         </div>
 
-        <div className="page-filler" id="skills">
+        <div id="skills">
             <div className="flex-columns ">
-                <div className="flex-full-column p2">
+                <div className="flex-full-column flex-full-column-70 p2">
                     <div className="w100">
                         <h2>Skills</h2>
+                        <div className="skill-badges">
+                            <div className="single-skill">
+                                <span style={{paddingRight: "0.25rem"}}>
+                                    Most Used
+                                </span>
+                                {skillBadgeIcon(4)}
+                            </div>
+                            <div className="single-skill">
+                                <span style={{paddingRight: "0.25rem"}}>
+                                    Advanced
+                                </span>
+                                {skillBadgeIcon(3)}
+                            </div>
+                            <div className="single-skill">
+                                <span style={{paddingRight: "0.25rem"}}>
+                                    Intermediate
+                                </span>
+                                {skillBadgeIcon(2)}
+                            </div>
+                            <div className="single-skill">
+                                <span style={{paddingRight: "0.25rem"}}>
+                                    Novice
+                                </span>
+                                {skillBadgeIcon(1)}
+                            </div>
+                        </div>
                         <h3 className="mb-0">Current Skills</h3>
                         <div className="text-lead">
                             Used in the past year.
@@ -273,21 +289,30 @@ const App: FC = () => (
 
 const skillBadgeIcon = (level: number) => {
     const rings = []
-
-
+    if (level === 4) {
+        return (
+            <FontAwesomeIcon className={"skill-star"} icon={faStar}/>
+        )
+    } else {
+        for (let i = 0; i < level; i++) {
+            rings.push(
+                <FontAwesomeIcon className={`skill-level skill-level-${level}`} icon={faCircle}/>
+            )
+        }
+        for (let i = 0; i < 3 - level; i++) {
+            rings.push(
+                <FontAwesomeIcon className={`skill-level skill-level-${level}`} icon={faCircleHollow}/>
+            )
+        }
+    }
+    return rings
 }
 
 const skillBadges = (badges: BadgeType[]) => {
     const results = badges.map((b) => (
         <div className="single-skill">
-            {typeof b[2] === "string" ? ((b[2] === "") ? null :
-                    (<div className={"skill-icon icon-" + b[2]}/>)
-            ) : (
-                <FontAwesomeIcon style={{fontSize: "0.85rem", marginRight: "0.5rem"}} icon={b[2]}/>
-            )}
-            {b[0]}
+            <span style={{paddingRight: "0.25rem"}}>{b[0]}</span>{skillBadgeIcon(b[1])}
         </div>
-
     ))
     return (
         <div className="skill-badges">
