@@ -73,7 +73,6 @@ const activeSkills: BadgeType[] = [
     ["MongoDB", 2],
     ["PostgreSQL", 2],
     ["Google Analytics", 2],
-    ["Google Suite", 2],
     ["Shell Scripting", 1],
     ["S3", 1],
 ]
@@ -85,7 +84,11 @@ const passiveSkills: BadgeType[] = [
     ["Adobe Suite", 2],
     ["Office Suite", 2],
     ["Unit Testing", 2],
-    ["Autodesk Fusion", 1],
+    ["Cloudflare", 2],
+    ["Digital Ocean", 2],
+    ["Sentry.io", 2],
+    ["Google Cloud", 1],
+    ["Autodesk Fusion 360", 1],
 ]
 
 const pastSkills: BadgeType[] = [
@@ -281,7 +284,30 @@ const App: FC = () => (
         </div>
 
 
-        <div className="page-filler" id="experience">
+        <div className="page-filler">
+            <div className="flex-columns ">
+                <div className="flex-inner-column flex-inner-column-30 p2 portrait-mobile">
+                    <Portrait/>
+                </div>
+                <div className="flex-inner-column flex-inner-column-70 p2" id="about-me">
+                    <div className="w100">
+                        <h2>My Work</h2>
+                        <div className="work-story-container">
+                            <div className="story-body">
+                                <h3>Matthys Wines</h3>
+                                <div className="story-text">
+                                    matthys wines blabla
+                                </div>
+                            </div>
+                            <div className="story-image">
+                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex-inner-column flex-inner-column-30 p2 portrait-desktop">
+                </div>
+            </div>
         </div>
 
     </div>

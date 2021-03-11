@@ -464,3 +464,12 @@ a {
   }
 
 }
+
+.work-story-container {
+  display: flex;
+  justify-content: center;
+
+  .story-body, .story-image {
+    flex-grow: 1;
+  }
+}
