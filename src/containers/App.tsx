@@ -275,7 +275,7 @@ const App: FC = () => (
         </div>
 
 
-        <div className="page-filler">
+        <div className="page-filler" id="experience">
             <div className="flex-columns ">
                 <div className="flex-full-column flex-full-column-70 p2">
                     <div className="w100">
@@ -283,7 +283,7 @@ const App: FC = () => (
                         <div className="work-story-container">
                             <div className="story-body">
                                 <div className="story-padding">
-                                    <h3 className="work-title work-icon-mw">Matthys Wines</h3>
+                                    <h3 id="matthys-wines" className="work-title work-icon-mw">Matthys Wines</h3>
                                     <p className="story-text">
                                         I've been working part-time at Matthys Wines for around two years. Building a
                                         new online store during the first year and expanding on that with a custom built
@@ -394,13 +394,15 @@ const App: FC = () => (
                                 <img
                                     src="https://static.aelbrecht.io/portfolio/mw-country-editor.png"
                                     className="story-image-display"
+                                    alt="country editor"
                                 />
-                                <p>Admin panel - Country editor</p>
+                                <p>Admin panel editor</p>
                                 <img
                                     src="https://static.aelbrecht.io/portfolio/mw-country-editor-code.png"
                                     className="story-image-display"
+                                    alt="country editor code"
                                 />
-                                <p>Country editor code</p>
+                                <p>High level admin panel code</p>
                             </div>
                         </div>
                     </div>
@@ -470,19 +472,9 @@ const Portrait = () => (
         </div>
         <div className="profile-description">
             <p>
-                WIP
-                <br/>
-                Student of computers and enthusiast for science.
-                <br/>
-                <br/>
-                - Mostly building microservices, web applications and bringing them to life.
-                <br/>
-                - UI and 2D graphics design is my passion.
-                <br/>
-                - Go, Python and TypeScript are my language.
-                <br/>
-                <br/>
-                Currently studying Computer Science and working on professional projects in my free time.
+                Fascinated by space, science and computers. Strive to build applications with clean code and
+                minimalistic interfaces. Currently studying Computer Science and working on professional
+                projects in my free time.
             </p>
         </div>
     </div>
