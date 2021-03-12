@@ -132,7 +132,7 @@ h3:not(.work-title) {
 
 .element-name {
   padding-left: 50%;
-  background-image: url("./name-frame.svg");
+  background-image: url("../images/name-frame.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -290,7 +290,7 @@ a {
 .education-segment {
   margin-bottom: 2rem;
   padding: 1.8rem 0 0.6rem 2.25rem;
-  background-image: url("./education-frame.svg");
+  background-image: url("../images/education-frame.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -400,45 +400,6 @@ a {
     margin: 0.2rem;
   }
 
-  .skill-icon {
-    width: 14px;
-    height: 14px;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    display: inline-block;
-    margin-right: 0.3rem;
-    background-size: contain;
-    margin-bottom: -2px;
-  }
-
-  .icon-mongodb {
-    background-image: url("./icons/mongodb.svg");
-  }
-
-  .icon-typescript {
-    background-image: url("./icons/typescript.svg");
-  }
-
-  .icon-postgres {
-    background-image: url("./icons/postgres.svg");
-  }
-
-  .icon-analytics {
-    background-image: url("./icons/analytics.svg");
-  }
-
-  .icon-s3 {
-    background-image: url("./icons/s3.svg");
-  }
-
-  .icon-unix {
-    background-image: url("./icons/unix.svg");
-  }
-
-  .icon-go {
-    background-image: url("./icons/go.svg");
-  }
-
   .skill-star {
     font-size: 0.8rem;
     margin-bottom: 1px;
@@ -514,10 +475,6 @@ a {
     background-position: center;
     background-size: contain;
     margin: 0.5rem;
-  }
-
-  .image-mw-1 {
-    background-image: url("./mw-topology.svg");
   }
 
   .story-image {
