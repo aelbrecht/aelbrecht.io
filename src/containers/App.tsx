@@ -472,7 +472,7 @@ const Portrait = () => (
         </div>
         <div className="profile-description">
             <p>
-                Fascinated by space, science and computers. Strive to build applications with clean code and
+                Fascinated by space, science and computers. Striving to build applications with clean code and
                 minimalistic interfaces. Currently studying Computer Science and working on professional
                 projects in my free time.
             </p>
