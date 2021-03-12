@@ -87,7 +87,7 @@ const skillBadgeIcon = (level: number) => {
 }
 
 const SkillList: FC = () => (
-    <div className="flex-columns" id="skills">
+    <section className="flex-columns" id="skills">
         <div className="flex-full-column flex-full-column-70 p2">
             <div className="w100">
                 <h2>Skills</h2>
@@ -139,7 +139,7 @@ const SkillList: FC = () => (
                 {skillBadges(otherSkills)}
             </div>
         </div>
-    </div>
+    </section>
 )
 
 export default SkillList

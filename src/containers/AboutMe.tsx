@@ -39,7 +39,7 @@ const EduBlock: FC<EduBlockInterface> = ({title, location}) => (
 )
 
 const AboutMe: FC = () => (
-    <div className="page-filler">
+    <section className="page-filler">
         <div className="flex-columns ">
             <div className="flex-inner-column flex-inner-column-30 p2 portrait-mobile">
                 <Portrait/>
@@ -122,7 +122,7 @@ const AboutMe: FC = () => (
                 <Portrait/>
             </div>
         </div>
-    </div>
+    </section>
 )
 
 export default AboutMe

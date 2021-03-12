@@ -3,7 +3,7 @@ import topology from "../images/hs-topology.svg";
 import Link from "./Link";
 
 const HolidaySuites: FC = () => (
-    <div className="work-story-container">
+    <section className="work-story-container">
         <div className="story-body">
             <div className="story-padding">
                 <h3 id="holiday-suites" className="work-title work-icon-hs">Holiday Suites</h3>
@@ -76,7 +76,7 @@ const HolidaySuites: FC = () => (
                 <p>Dynamic price editor</p>
             </div>
         </div>
-    </div>
+    </section>
 )
 
 export default HolidaySuites

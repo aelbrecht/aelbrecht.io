@@ -19,7 +19,7 @@ const ContactFeature: FC<ContactFeatureInterface> = p => (
 )
 
 const ContactMenu: FC = () => (
-    <section className="contact">
+    <div className="contact">
         <ContactFeature
             label="rudolf@aelbrecht.io"
             href="mailto:rudolf@aelbrecht.io"
@@ -40,7 +40,7 @@ const ContactMenu: FC = () => (
             href="http://m.me/aelbrechtrudolf"
             icon={faFacebookMessenger}
         />
-    </section>
+    </div>
 )
 
 export default ContactMenu

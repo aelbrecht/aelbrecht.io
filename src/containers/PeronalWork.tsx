@@ -3,7 +3,7 @@ import Link from "./Link"
 import LazyLoad from 'react-lazyload'
 
 const PersonalWork: FC = () => (
-    <div className="work-story-container">
+    <section className="work-story-container">
         <div className="story-body">
             <div className="story-padding">
                 <h3 className="work-title ">Side Projects</h3>
@@ -85,7 +85,7 @@ const PersonalWork: FC = () => (
                 </LazyLoad>
             </div>
         </div>
-    </div>
+    </section>
 )
 
 export default PersonalWork

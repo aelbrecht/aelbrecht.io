@@ -5,7 +5,7 @@ import mwTopology from "../images/mw-topology.svg";
 import Link from "./Link";
 
 const MatthysWines: FC = () => (
-    <div className="work-story-container">
+    <section className="work-story-container">
         <div className="story-body">
             <div className="story-padding">
                 <h3 id="matthys-wines" className="work-title work-icon-mw">Matthys Wines</h3>
@@ -136,7 +136,7 @@ const MatthysWines: FC = () => (
                 <p>High level admin panel code</p>
             </div>
         </div>
-    </div>
+    </section>
 )
 
 export default MatthysWines
