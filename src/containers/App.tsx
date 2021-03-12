@@ -4,6 +4,7 @@ import {faCircle as faCircleHollow} from '@fortawesome/free-regular-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React, {FC} from 'react';
 import './App.scss';
+import mwTopology from "./mw-topology.svg"
 
 
 interface ContactFeatureInterface {
@@ -335,7 +336,7 @@ const App: FC = () => (
                                         a <Link to="https://www.matthys-wines.com/en/wines">product catalogue</Link> was
                                         created which
                                         can be filtered instantly giving users the flexibility of searching without
-                                        having to wait on service round trips.
+                                        having to wait on server round trips.
                                     </p>
                                     <p>
                                         <b>Payment system</b>
@@ -388,21 +389,27 @@ const App: FC = () => (
                                     </p>
                                 </div>
                             </div>
-                            <div className="story-padding story-image ">
-                                <div className="story-image-display image-mw-1"/>
-                                <p>Topology overview</p>
-                                <img
-                                    src="https://static.aelbrecht.io/portfolio/mw-country-editor.png"
-                                    className="story-image-display"
-                                    alt="country editor"
-                                />
-                                <p>Admin panel editor</p>
-                                <img
-                                    src="https://static.aelbrecht.io/portfolio/mw-country-editor-code.png"
-                                    className="story-image-display"
-                                    alt="country editor code"
-                                />
-                                <p>High level admin panel code</p>
+                            <div className="story-image ">
+                                <div className="story-padding ">
+                                    <img
+                                        src={mwTopology}
+                                        className="story-image-display"
+                                        alt="country editor"
+                                    />
+                                    <p>Topology overview</p>
+                                    <img
+                                        src="https://static.aelbrecht.io/portfolio/mw-country-editor.png"
+                                        className="story-image-display"
+                                        alt="country editor"
+                                    />
+                                    <p>Admin panel editor</p>
+                                    <img
+                                        src="https://static.aelbrecht.io/portfolio/mw-country-editor-code.png"
+                                        className="story-image-display"
+                                        alt="country editor code"
+                                    />
+                                    <p>High level admin panel code</p>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -469,6 +469,9 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 1000px) {
+    flex-wrap: wrap;
+  }
 
   .story-body, .story-image {
     flex-grow: 1;
@@ -482,6 +485,7 @@ a {
   .story-body {
     border-radius: 20px;
     background-color: #f8f8f8;
+    margin-bottom: 1rem;
   }
 
   .story-link {
@@ -504,7 +508,7 @@ a {
     padding-left: 40px;
   }
 
-  .story-image-display {
+  .story-image-display:not(img) {
     min-height: 420px;
     background-repeat: no-repeat;
     background-position: center;
