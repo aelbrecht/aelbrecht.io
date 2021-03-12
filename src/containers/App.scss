@@ -444,9 +444,13 @@ a {
   }
 
   .story-body {
-    border-radius: 20px;
-    background-color: #f8f8f8;
     margin-bottom: 1rem;
+
+    .story-padding {
+      border-radius: 20px;
+      padding-bottom: 1rem;
+      background-color: #f8f8f8;
+    }
   }
 
   .story-link {
@@ -462,11 +466,18 @@ a {
     text-align: justify;
   }
 
-  .work-icon-mw {
-    background-image: url("https://static.aelbrecht.io/portfolio/matthys-wines.png");
+  .work-icon-mw, .work-icon-hs {
     background-size: contain;
     background-repeat: no-repeat;
     padding-left: 40px;
+  }
+
+  .work-icon-mw {
+    background-image: url("https://static.aelbrecht.io/portfolio/matthys-wines.png");
+  }
+
+  .work-icon-hs {
+    background-image: url("../images/holiday-suites.svg");
   }
 
   .story-image-display:not(img) {

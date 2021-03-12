@@ -82,8 +82,9 @@ const MatthysWines: FC = () => (
                 <p className="mt-0">
                     <b>Microservices</b>
                     <br/>
-                    The back-end is structured as a web of microservices. Giving the advantage of
+                    The back-end is structured as a web of microservices giving the advantage of
                     having a small and clean code base for each core functionality of the platform.
+                    Docker Compose runs all containers for its simplicity and ability to be quickly setup and deployed.
                     Go is used for the larger part of the microservices. Having code that is
                     strictly typed reduced the amount of bugs and sped up development time
                     significantly. Libraries which were faster or easier to implement in Node.js

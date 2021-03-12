@@ -1,12 +1,10 @@
-import {faFacebookMessenger, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React, {FC} from 'react';
 import './App.scss';
 import MatthysWines from "./MatthysWines";
 import SkillList from "./SkillList";
 import ContactMenu from "./ContactMenu";
 import AboutMe from "./AboutMe";
+import HolidaySuites from "./HolidaySuites";
 
 interface MenuItemInterface {
     href: string
@@ -55,6 +53,7 @@ const App: FC = () => (
                     <div className="w100">
                         <h2>My Work</h2>
                         <MatthysWines/>
+                        <HolidaySuites/>
                     </div>
                 </div>
             </div>
