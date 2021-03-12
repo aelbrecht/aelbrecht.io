@@ -18,6 +18,7 @@ const activeSkills: BadgeType[] = [
     ["MongoDB", 2],
     ["PostgreSQL", 2],
     ["G Analytics", 2],
+    ["Arduino", 2],
     ["Shell Scripting", 1],
     ["S3", 1],
 ]
@@ -27,7 +28,6 @@ const passiveSkills: BadgeType[] = [
     ["Unix", 3],
     ["Final Cut Pro", 2],
     ["Creative Cloud", 2],
-    ["Unit Testing", 2],
     ["Cloudflare", 2],
     ["Digital Ocean", 2],
     ["Office", 2],
@@ -36,11 +36,13 @@ const passiveSkills: BadgeType[] = [
     ["Fusion 360", 1],
 ]
 
-const pastSkills: BadgeType[] = [
+const uniSkills: BadgeType[] = [
     ["C", 2],
     ["Java", 2],
-    ["Arduino", 2],
+    ["LaTeX", 2],
+    ["Unit Testing", 2],
     ["C++", 1],
+    ["Scrum", 1],
     ["Assembly", 1]
 ]
 
@@ -125,11 +127,11 @@ const SkillList: FC = () => (
                     Actively used programs or environments.
                 </div>
                 {skillBadges(passiveSkills)}
-                <h3 className="mb-0">Past Skills</h3>
+                <h3 className="mb-0">University Skills</h3>
                 <div className="text-lead">
                     Used for a project at some point.
                 </div>
-                {skillBadges(pastSkills)}
+                {skillBadges(uniSkills)}
                 <h3 className="mb-0">Other skill</h3>
                 <div className="text-lead">
                     Used for project in the past but moved on from.

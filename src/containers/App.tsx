@@ -5,6 +5,7 @@ import SkillList from "./SkillList";
 import ContactMenu from "./ContactMenu";
 import AboutMe from "./AboutMe";
 import HolidaySuites from "./HolidaySuites";
+import PersonalWork from "./PeronalWork";
 
 interface MenuItemInterface {
     href: string
@@ -36,8 +37,6 @@ const App: FC = () => (
                                 <MenuItem href="#skills" name="skill" prefix="010"/>
                                 <br/>
                                 <MenuItem href="#experience" name="my work" prefix="011"/>
-                                <br/>
-                                <MenuItem href="#contact" name="contact" prefix="100"/>
                             </div>
                         </div>
                     </div>
@@ -54,6 +53,7 @@ const App: FC = () => (
                         <h2>My Work</h2>
                         <MatthysWines/>
                         <HolidaySuites/>
+                        <PersonalWork/>
                     </div>
                 </div>
             </div>
