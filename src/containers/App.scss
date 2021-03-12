@@ -33,7 +33,7 @@ h2 {
   }
 }
 
-h3 {
+h3:not(.work-title) {
   font-weight: 600;
   font-size: 1.2rem;
   text-transform: lowercase;
@@ -466,10 +466,95 @@ a {
 }
 
 .work-story-container {
+  width: 100%;
   display: flex;
   justify-content: center;
 
   .story-body, .story-image {
     flex-grow: 1;
+    min-width: 50%;
   }
+
+  .story-padding {
+    padding: 0.5rem 2rem;
+  }
+
+  .story-body {
+    border-radius: 20px;
+    background-color: #f8f8f8;
+  }
+
+  .story-link {
+    margin-bottom: 1rem;
+  }
+
+  .work-title {
+    font-weight: normal;
+    font-size: 1.4rem;
+  }
+
+  .story-text {
+    text-align: justify;
+  }
+
+  .work-icon-mw {
+    background-image: url("https://static.aelbrecht.io/portfolio/matthys-wines.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+  }
+
+  .story-image-display {
+    min-height: 420px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0.5rem;
+  }
+
+  .image-mw-1 {
+    background-image: url("./mw-topology.svg");
+  }
+
+  .story-image {
+    align-self: center;
+
+    p {
+      margin-top: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  h4 {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-size: 1.2rem;
+  }
+}
+
+.work-showcase {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 2rem;
+
+  .carousel .slide {
+    background: white;
+  }
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
 }
