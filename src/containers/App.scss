@@ -441,6 +441,10 @@ a {
 
   .story-padding {
     padding: 0.5rem 2rem;
+
+    @media screen and (max-width: 1000px) {
+      padding: 0;
+    }
   }
 
   .story-body {
@@ -450,6 +454,9 @@ a {
       border-radius: 20px;
       padding-bottom: 1rem;
       background-color: #f8f8f8;
+      @media screen and (max-width: 1000px) {
+        background-color: transparent;
+      }
     }
   }
 
