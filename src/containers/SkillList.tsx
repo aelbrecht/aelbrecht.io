@@ -129,7 +129,7 @@ const SkillList: FC = () => (
                 {skillBadges(passiveSkills)}
                 <h3 className="mb-0">University Skills</h3>
                 <div className="text-lead">
-                    Used for a project at some point.
+                    Used projects at some point.
                 </div>
                 {skillBadges(uniSkills)}
                 <h3 className="mb-0">Other skill</h3>

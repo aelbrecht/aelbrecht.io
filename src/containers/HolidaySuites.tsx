@@ -7,6 +7,7 @@ const HolidaySuites: FC = () => (
         <div className="story-body">
             <div className="story-padding">
                 <h3 id="holiday-suites" className="work-title work-icon-hs">Holiday Suites</h3>
+                <p><b>2016 - 2018 | Web Developer</b></p>
                 <p className="story-text">
                     <b>Payment platform integration</b>
                     <br/>

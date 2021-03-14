@@ -69,12 +69,13 @@ const AboutMe: FC = () => (
                                 Matthys Wines
                             </div>
                             <div className="exp-function">
-                                2y - Full Stack Developer
+                                2019 - 2021 | Full Stack Developer
                             </div>
                             <div className="exp-description">
-                                Creating a custom e-commerce platform to be scalable and maintainable
-                                by a single person. Implementing logic to filter a huge assortment of wine and
-                                give instant recommendations.
+                                Created a custom e-commerce platform to be scalable and maintainable
+                                by a single person. Designed front-end, implemented logic to filter an expansive
+                                collection of wines in real time and deployed the platform as a cluster of
+                                microservices.
                                 <br/>
                                 <a href="#matthys-wines">Read more</a>
                             </div>
@@ -84,12 +85,13 @@ const AboutMe: FC = () => (
                                 Holiday Suites
                             </div>
                             <div className="exp-function">
-                                2y - Web Developer
+                                2016 - 2018 | Web Developer
                             </div>
                             <div className="exp-description">
-                                Responsible for adding a payment system to an existing web platform. Continuing
-                                to work on the web-booking logic by adding an inventory system and
-                                reworking front-end design.
+                                Responsible for creating an internal platform that managed web payments, promo codes
+                                and gift cards. Expanded on this by reworking existing destination pages with a
+                                cleaner and interactive layout adding features like package creation with an
+                                accompanied inventory management system.
                                 <br/>
                                 <a href="#holiday-suites">Read more</a>
                             </div>
