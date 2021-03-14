@@ -1,11 +1,11 @@
-import React, {FC} from 'react';
-import MatthysWines from "./MatthysWines";
-import SkillList from "./SkillList";
-import ContactMenu from "./ContactMenu";
-import AboutMe from "./AboutMe";
-import HolidaySuites from "./HolidaySuites";
-import PersonalWork from "./PersonalWork";
-import LandingBanner from "./LandingBanner";
+import React, {FC} from 'react'
+import MatthysWines from "./MatthysWines"
+import SkillList from "./SkillList"
+import ContactMenu from "./ContactMenu"
+import AboutMe from "./AboutMe"
+import HolidaySuites from "./HolidaySuites"
+import PersonalWork from "./PersonalWork"
+import LandingBanner from "./LandingBanner"
 
 const App: FC = () => (
     <div>
@@ -29,4 +29,4 @@ const App: FC = () => (
         <ContactMenu/>
     </div>
 )
-export default App;
+export default App

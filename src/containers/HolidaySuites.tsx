@@ -1,6 +1,6 @@
 import React, {FC} from "react"
-import topology from "../images/hs-topology.svg";
-import Link from "./Link";
+import topology from "../images/hs-topology.svg"
+import Link from "./Link"
 
 const HolidaySuites: FC = () => (
     <section className="work-story-container">

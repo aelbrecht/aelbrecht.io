@@ -1,8 +1,8 @@
 import React, {FC} from "react"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLink} from "@fortawesome/free-solid-svg-icons";
-import mwTopology from "../images/mw-topology.svg";
-import Link from "./Link";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faLink} from "@fortawesome/free-solid-svg-icons"
+import mwTopology from "../images/mw-topology.svg"
+import Link from "./Link"
 
 const MatthysWines: FC = () => (
     <section className="work-story-container">

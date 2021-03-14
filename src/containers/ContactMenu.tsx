@@ -1,7 +1,7 @@
 import React, {FC} from "react"
-import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
-import {faFacebookMessenger, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons"
+import {faFacebookMessenger, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
 interface ContactFeatureInterface {
     href: string
