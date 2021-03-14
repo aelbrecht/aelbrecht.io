@@ -30,20 +30,20 @@ const HolidaySuites: FC = () => (
                     <br/>
                 </p>
                 <p>
-                    <h5 className="mb-0">Checkout, promo codes and gift cards</h5>
+                    <h5 className="mb-0">Checkout, promo codes and gift cards | 2017</h5>
                     <br/>
                     Fully customizable promo codes which could be applied with a variety of restriction.
                     Purchasing of gift cards was added that would then be sent to the recipient via email. These could
                     be used as promo codes but are applied as a partial payment method.
                 </p>
                 <p>
-                    <h5 className="mb-0">Events, accommodations and blog posts</h5>
+                    <h5 className="mb-0">Events, accommodations and blog posts | 2017-2018</h5>
                     <br/>
                     Some small content pages were replaced to provide a more modern layout. Editors were added to
                     replace the existing slow editors which the WordPress theme provided.
                 </p>
                 <p>
-                    <h5 className="mb-0">Inventory system</h5>
+                    <h5 className="mb-0">Inventory system | 2017-2018</h5>
                     <br/>
                     Package deals were introduced which were custom pages on which bookings could be made with
                     certain perks like tickets or free items. The price and inclusion of these items could be fully
