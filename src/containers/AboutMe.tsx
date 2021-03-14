@@ -59,14 +59,6 @@ const AboutMe: FC = () => (
                         />
                         <EduBlock
                             title={"Science and Mathematics"}
-                            location={"2014 - Sint-Franciscus-Xaveriusinstituut"}
-                        />
-                        <EduBlock
-                            title={"Economics"}
-                            location={"2012 - Sint-Franciscus-Xaveriusinstituut"}
-                        />
-                        <EduBlock
-                            title={"Latin"}
                             location={"2010 - Sint-Franciscus-Xaveriusinstituut"}
                         />
                     </div>
@@ -113,6 +105,10 @@ const AboutMe: FC = () => (
                         <tr>
                             <td>English</td>
                             <td className="lang-stat lang-good">good</td>
+                        </tr>
+                        <tr>
+                            <td>Russian</td>
+                            <td className="lang-stat lang-bad">basics</td>
                         </tr>
                         </tbody>
                     </table>
