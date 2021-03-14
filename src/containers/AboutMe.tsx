@@ -51,15 +51,15 @@ const AboutMe: FC = () => (
                     <div className="education-segment">
                         <EduBlock
                             title={"MSc in Computer Science"}
-                            location={"2020 - Ghent University"}
+                            location={"Ghent University | 2020"}
                         />
                         <EduBlock
                             title={"BSc in Computer Science"}
-                            location={"2016 - Ghent University"}
+                            location={"Ghent University | 2016"}
                         />
                         <EduBlock
                             title={"Science and Mathematics"}
-                            location={"2010 - Sint-Franciscus-Xaveriusinstituut"}
+                            location={"Sint-Franciscus-Xaveriusinstituut | 2010"}
                         />
                     </div>
                     <h3>Experiences</h3>
@@ -69,7 +69,7 @@ const AboutMe: FC = () => (
                                 Matthys Wines
                             </div>
                             <div className="exp-function">
-                                2019 - 2021 | Full Stack Developer
+                                Full Stack Developer | 2019 - 2021
                             </div>
                             <div className="exp-description">
                                 Created a custom e-commerce platform to be scalable and maintainable
@@ -85,7 +85,7 @@ const AboutMe: FC = () => (
                                 Holiday Suites
                             </div>
                             <div className="exp-function">
-                                2016 - 2018 | Web Developer
+                                Web Developer | 2016 - 2018
                             </div>
                             <div className="exp-description">
                                 Responsible for creating an internal platform that managed web payments, promo codes
