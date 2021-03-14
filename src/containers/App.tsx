@@ -6,6 +6,7 @@ import AboutMe from "./AboutMe"
 import HolidaySuites from "./HolidaySuites"
 import PersonalWork from "./PersonalWork"
 import LandingBanner from "./LandingBanner"
+import Link from "./Link";
 
 const App: FC = () => (
     <div>
@@ -27,6 +28,11 @@ const App: FC = () => (
         </div>
         <div style={{height: "3rem"}}/>
         <ContactMenu/>
+        <footer>
+            &copy; {(new Date()).getFullYear()} Rudolf Aelbrecht
+            <span style={{padding: "0 0.5rem"}}>|</span>
+            <Link to="https://github.com/aelbrecht/portfolio.aelbrecht.io">View source</Link>
+        </footer>
     </div>
 )
 export default App

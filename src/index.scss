@@ -8,7 +8,6 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 .landing-banner {
     background-image: url("https://static.aelbrecht.io/portfolio/snow-banner.jpg");
 
@@ -564,4 +563,10 @@ h5 {
 
 .mb-0 {
     margin-bottom: 0;
+}
+
+footer {
+    padding: 0 0.5rem 1rem 0.5rem;
+    color: #3d3d3d;
+    text-align: center;
 }
