@@ -58,7 +58,7 @@ const PersonalWork: FC = () => (
                         className="story-image-display"
                         alt="2d game"
                     />
-                    <p>Noise world generation</p>
+                    <p>2D Open world</p>
                     <img
                         src="https://static.aelbrecht.io/portfolio/trading-bot.gif"
                         className="story-image-display"
