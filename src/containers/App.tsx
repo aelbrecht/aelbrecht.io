@@ -31,7 +31,7 @@ const App: FC = () => (
         <footer>
             &copy; {(new Date()).getFullYear()} Rudolf Aelbrecht
             <span style={{padding: "0 0.5rem"}}>|</span>
-            <Link to="https://github.com/aelbrecht/portfolio.aelbrecht.io">View source</Link>
+            <Link to="https://github.com/aelbrecht/aelbrecht.io">View source</Link>
         </footer>
     </div>
 )
