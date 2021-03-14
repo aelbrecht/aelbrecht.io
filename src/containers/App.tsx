@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import './App.scss';
 import MatthysWines from "./MatthysWines";
 import SkillList from "./SkillList";
 import ContactMenu from "./ContactMenu";
