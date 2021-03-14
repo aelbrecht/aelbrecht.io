@@ -9,7 +9,7 @@ const MatthysWines: FC = () => (
         <div className="story-body">
             <div className="story-padding">
                 <h3 id="matthys-wines" className="work-title work-icon-mw">Matthys Wines</h3>
-                <p><b>2019 - 2021 | Full Stack Developer</b></p>
+                <p><b>Full Stack Developer | 2019 - 2021</b></p>
                 <p className="story-text">
                     Built an e-commerce platform during the first year and expanded its features while migrating to a
                     microservice architecture in the second. In order to make this project achievable by a single
@@ -35,7 +35,7 @@ const MatthysWines: FC = () => (
                 </div>
                 <h4 className="mb-1">Front-End</h4>
                 <p className="mt-0">
-                    <b>Styling | 2019 </b>
+                    <h5 className="mb-0">Styling | 2019 </h5>
                     <br/>
                     The layout was designed and coded from scratch using the styling
                     framework <Link to="https://picturepan2.github.io/spectre/">Spectre.css</Link> as a base. The whole
@@ -45,7 +45,7 @@ const MatthysWines: FC = () => (
                     site, striking a balance between information and usability.
                 </p>
                 <p>
-                    <b>Lightning fast catalogue | 2019</b>
+                    <h5 className="mb-0">Lightning fast catalogue | 2019</h5>
                     <br/>
                     By using extensive client-side caching
                     a <Link to="https://www.matthys-wines.com/en/wines">product catalogue</Link> was
@@ -54,20 +54,20 @@ const MatthysWines: FC = () => (
                     having to wait on server round trips.
                 </p>
                 <p>
-                    <b>Payment system | 2019</b>
+                    <h5 className="mb-0">Payment system | 2019</h5>
                     <br/>
                     <Link to="https://www.europabank.be/">Europabank</Link> was integrated into the platform providing
                     a secure and tamper-proof payment system.
                 </p>
                 <p>
-                    <b>Accounts and Members | 2020</b>
+                    <h5 className="mb-0">Accounts and Members | 2020</h5>
                     <br/>
                     <Link to="https://auth0.com/">Auth0</Link> was added to quickly deploy a user account platform
                     on which users can view order history. For Horeca a members-only catalogue and checkout was created
                     to digitize their ordering process.
                 </p>
                 <p>
-                    <b>High level admin panel | 2020</b>
+                    <h5 className="mb-0">High level admin panel | 2020</h5>
                     <br/>
                     In order to reduce the amount of time that is consumed adding new editors and features to the
                     admin panel a lot of components were created to make it highly customizable and fast to rework.
@@ -76,7 +76,7 @@ const MatthysWines: FC = () => (
                 </p>
                 <h4 className="mb-1">Back-End</h4>
                 <p className="mt-0">
-                    <b>Microservices | 2021</b>
+                    <h5 className="mb-0">Microservices | 2021</h5>
                     <br/>
                     The back-end is structured as a collection of microservices giving the advantage of
                     having multiple small code bases for each core functionality of the platform that can be easily
@@ -86,16 +86,16 @@ const MatthysWines: FC = () => (
                     development time.
                 </p>
                 <p>
-                    <b>Dynamic document store | 2020</b>
+                    <h5 className="mb-0">Dynamic document store | 2020</h5>
                     <br/>
                     A custom service was developed as a layer on top
                     of <Link to="https://www.mongodb.com/">MongoDB</Link> to remove the need of statically defined
                     databases tables. Using <Link to="https://json-schema.org/">JSON Schema</Link> and core ideas from
                     the <Link to="https://jsonapi.org/">JSON:API</Link> a list of schemas are used to dynamically
-                    setup endpoints at runtime which validates all incoming documents to guarantee data integrity.
+                    setup endpoints at runtime which validates all incoming documents and guarantees data integrity.
                 </p>
                 <p>
-                    <b>Email | 2020</b>
+                    <h5 className="mb-0">Email | 2020</h5>
                     <br/>
                     Mail for order confirmations and occasional newsletters are design
                     using <Link to="https://mjml.io/">MJML</Link> and converted
