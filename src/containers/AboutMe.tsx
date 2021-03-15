@@ -14,7 +14,7 @@ const Portrait = () => (
         </div>
         <div className="profile-description">
             <p>
-                Fascinated by space, science and computers. Striving to build applications with clean code and
+                Fascinated by space, science, and computers. Striving to build applications with clean code and
                 minimalistic interfaces. Currently studying Computer Science and working on professional
                 projects in my free time.
             </p>
@@ -76,8 +76,6 @@ const AboutMe: FC = () => (
                                 by a single person. Designed front-end, implemented logic to filter an expansive
                                 collection of wines in real time and deployed the platform as a cluster of
                                 microservices.
-                                <br/>
-                                <a href="#matthys-wines">Read more</a>
                             </div>
                         </div>
                         <div className="exp-block exp-holiday-suites">
@@ -88,12 +86,10 @@ const AboutMe: FC = () => (
                                 Web Developer | 2016 - 2018
                             </div>
                             <div className="exp-description">
-                                Responsible for creating an internal platform that managed web payments, promo codes
+                                Responsible for creating an internal platform that managed web-payments, promo codes,
                                 and gift cards. Expanded on this by reworking existing destination pages with a
-                                cleaner and interactive layout adding features like package creation with an
-                                accompanied inventory management system.
-                                <br/>
-                                <a href="#holiday-suites">Read more</a>
+                                cleaner and interactive, layout adding features like package creation with an
+                                added inventory management system.
                             </div>
                         </div>
                     </div>
