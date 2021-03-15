@@ -234,7 +234,8 @@ h3:not(.work-title) {
 }
 
 .contact {
-    margin-bottom: 5vh;
+    max-width: 1800px;
+    margin: auto auto 5vh;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

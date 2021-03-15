@@ -51,15 +51,15 @@ const AboutMe: FC = () => (
                     <div className="education-segment">
                         <EduBlock
                             title={"MSc in Computer Science"}
-                            location={"Ghent University | 2020"}
+                            location={"Ghent University | 2020 - now"}
                         />
                         <EduBlock
                             title={"BSc in Computer Science"}
-                            location={"Ghent University | 2016"}
+                            location={"Ghent University | 2016 - 2020"}
                         />
                         <EduBlock
                             title={"Science and Mathematics"}
-                            location={"Sint-Franciscus-Xaveriusinstituut | 2010"}
+                            location={"Sint-Franciscus-Xaveriusinstituut | 2010 - 2016"}
                         />
                     </div>
                     <h3>Experiences</h3>

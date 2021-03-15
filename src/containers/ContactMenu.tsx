@@ -1,6 +1,6 @@
 import React, {FC} from "react"
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons"
-import {faFacebookMessenger, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
+import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
 interface ContactFeatureInterface {
@@ -34,11 +34,6 @@ const ContactMenu: FC = () => (
             label="aelbrecht@github"
             href="https://github.com/aelbrecht"
             icon={faGithub}
-        />
-        <ContactFeature
-            label="aelbrechtrudolf@messenger"
-            href="http://m.me/aelbrechtrudolf"
-            icon={faFacebookMessenger}
         />
     </div>
 )
