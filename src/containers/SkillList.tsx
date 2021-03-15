@@ -27,10 +27,10 @@ const passiveSkills: BadgeType[] = [
     ["JetBrains", 3],
     ["Unix", 3],
     ["Final Cut Pro", 2],
-    ["Creative Cloud", 2],
+    ["Adobe Creative Cloud", 2],
     ["Cloudflare", 2],
     ["Digital Ocean", 2],
-    ["Office", 2],
+    ["MS Office", 2],
     ["Sentry.io", 2],
     ["GCP", 1],
     ["Fusion 360", 1],
@@ -119,22 +119,22 @@ const SkillList: FC = () => (
                 </div>
                 <h3 className="mb-0">Current Skills</h3>
                 <div className="text-lead">
-                    Used in the past year.
+                    Used in the past year
                 </div>
                 {skillBadges(activeSkills)}
                 <h3 className="mb-0">Passive Skills</h3>
                 <div className="text-lead">
-                    Actively used programs or environments.
+                    Actively used programs or environments
                 </div>
                 {skillBadges(passiveSkills)}
                 <h3 className="mb-0">University Skills</h3>
                 <div className="text-lead">
-                    Used projects at some point.
+                    Used for projects at some point
                 </div>
                 {skillBadges(uniSkills)}
                 <h3 className="mb-0">Other skill</h3>
                 <div className="text-lead">
-                    Used for project in the past but moved on from.
+                    Used for project in the past but moved on from
                 </div>
                 {skillBadges(otherSkills)}
             </div>
