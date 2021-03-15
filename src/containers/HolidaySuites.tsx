@@ -14,40 +14,40 @@ const HolidaySuites: FC = () => (
                     Build a payment page and integrate it into the existing checkout process. Previously a CC form was
                     present on the checkout page, this was replaced with the integration
                     of <Link to="https://www.ingenico.com/">Ingenico</Link>.
-                    The backend was modified to be able to redirect users to their payment page and confirm the payment
+                    The backend was adapted to be able to redirect users to their payment page and confirm the payment
                     with a feedback call.
                 </p>
                 <p>
                     <h5 className="mb-0">Internal platform | 2016 - 2018</h5>
                     <br/>
-                    Expanding on the payment integration I built an admin page on which management could view
-                    transactions and feedback status. The admin platform was a custom built PHP website using
-                    Bootstrap as a base. Over the time span of two years some core services were added to this platform
+                    Expanding on payment integration, I built an admin page on which management could view
+                    transactions and feedback status. The admin platform was a custom-built PHP website using
+                    Bootstrap as a base. Over the time span of two years, some core services were added to this platform
                     or replaced existing services provided originally by the WordPress theme. I designed the database
-                    layout that was used to handle all web related bookings that would then be synced up with the
-                    primary booking system. Holiday Suites has since replaced all web-related services with an
+                    layout that was used to handle all web-related bookings that would then be synced up with the
+                    central booking system. Holiday Suites has since replaced all web-related services with an
                     outsourced solution.
                     <br/>
                 </p>
                 <p>
                     <h5 className="mb-0">Checkout, promo codes and gift cards | 2017</h5>
                     <br/>
-                    Fully customizable promo codes which could be applied with a variety of restriction.
-                    Purchasing of gift cards was added that would then be sent to the recipient via email. These could
-                    be used as promo codes but are applied as a partial payment method.
+                    Fully customizable promo codes, which could be applied with a variety of restrictions.
+                    Gift cards were also added that would then be sent to the recipient via email and could
+                    be used as promo codes as a partial payment method.
                 </p>
                 <p>
                     <h5 className="mb-0">Events, accommodations and blog posts | 2017-2018</h5>
                     <br/>
                     Some small content pages were replaced to provide a more modern layout. Editors were added to
-                    replace the existing slow editors which the WordPress theme provided.
+                    replace the existing slow editors, which the WordPress theme provided.
                 </p>
                 <p>
                     <h5 className="mb-0">Inventory system | 2017-2018</h5>
                     <br/>
-                    Package deals were introduced which were custom pages on which bookings could be made with
+                    Package deals were introduced, which were custom pages on which bookings could be made with
                     certain perks like tickets or free items. The price and inclusion of these items could be fully
-                    customized in a pseudo-programming languages to limit a booking to a number of constraints. An
+                    customized in a pseudo-programming language to limit a booking to a set of constraints. An
                     inventory system kept track of how many items were still in stock to track availability.
                 </p>
             </div>

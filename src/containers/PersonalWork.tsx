@@ -11,41 +11,41 @@ const PersonalWork: FC = () => (
                 <p>
                     <h5>Dust Lake</h5>
                     <br/>
-                    Most of the work like the admin website and document logic used in the Matthys Wines platform was
+                    Most of the work, like the admin website and document logic used in the Matthys Wines platform, was
                     developed in my free time as a challenge to create the most maintainable project possible. In the
-                    end I was able to integrate the microservices into the stack of already existing
-                    services greatly reducing the amount of time needed to develop new features.
+                    end, I integrated the microservices into the stack of already existing
+                    services, greatly reducing the amount of time needed to develop new features.
                     <br/><br/>
-                    With this freedom I created a handful of experimental admin panels of which the final version now
+                    With this freedom, I created a handful of experimental admin panels, of which the final version now
                     runs in production. Multiple iterations gave me a good idea on how to develop an intuitive GUI
                     that a user with any computer experience can use.
                 </p>
                 <p className="story-text">
                     <h5>2D Graphics and Stock Trading</h5>
                     <br/>
-                    As a challenge to learn 2D graphics I've started to learn
-                    the <Link to="https://ebiten.org/">ebiten</Link> library in Go. Being able to Using simplex
-                    noise I <Link to="https://github.com/aelbrecht/iron-made">developed an algorithm</Link> to generate
-                    realistic looking contents possible to integrate into a game.
+                    As a challenge to learn 2D graphics, I've started to learn
+                    the <Link to="https://ebiten.org/">ebiten</Link> library in Go. With simplex
+                    noise, I <Link to="https://github.com/aelbrecht/iron-made">developed an algorithm</Link> to generate
+                    realistic-looking contents possible to integrate into a game.
                     <br/><br/>
-                    Trying to improve my real time drawing skills I created
-                    a <Link to="https://github.com/aelbrecht/rings-of-ara">simple 2D game engine</Link> which
+                    Trying to improve my real-time drawing skills, I created
+                    a <Link to="https://github.com/aelbrecht/rings-of-ara">simple 2D game engine</Link>, which
                     would procedurally generate chunks and a character could move in 2D space in an infinite world.
                     <br/><br/>
                     The final project I worked on was a trading terminal inspired
                     by <Link to="https://tradingview.com/">TradingView</Link> as a goal to create a bot that could
-                    automate or suggest stock trades. Using previous 2D plotting knowledge I was able
-                    to <Link to="https://github.com/aelbrecht/visim">plot a large amount of quotes</Link> and navigate
-                    them in real-time in any time range. The bot which ran as a python
-                    script could make simulated trades and communicate them to the Go program but was not developed
+                    automate or suggest stock trades. Using previous 2D drawing knowledge,
+                    I <Link to="https://github.com/aelbrecht/visim">plotted a large amount of quotes</Link> that could
+                    be navigated in real-time on any time scale. The bot, which ran as a python
+                    script, could make simulated trades, and communicate them to the Go program, but was not developed
                     further to make any useful decisions.
                 </p>
                 <p>
                     <h5>3D printing</h5>
                     <br/>
-                    Being fascinated by small electronics and IOT devices I've tried a handful of times to create some
-                    3D printed models and to wire up some small devices. A couple of those successful projects was a
-                    small car to distract my cats with, some prototypes for a robot arm and an automated irrigation
+                    Being fascinated by small electronics and IOT devices, I've tried a handful of times to create some
+                    3D-printed models and to wire up some small devices. A couple of those successful projects was a
+                    small car to distract my cats with some prototypes for a robot arm and an automated irrigation
                     system for my bedroom plants.
                 </p>
             </div>
