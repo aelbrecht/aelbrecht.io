@@ -16,46 +16,67 @@ const activeSkills: BadgeType[] = [
     ["HTML", 3],
     ["Docker", 2],
     ["MongoDB", 2],
-    ["PostgreSQL", 2],
+    ["SQL", 2],
     ["G Analytics", 2],
     ["Arduino", 2],
-    ["Shell Scripting", 1],
+    ["LaTeX", 2],
     ["S3", 1],
 ]
 
 const passiveSkills: BadgeType[] = [
     ["JetBrains", 3],
     ["Unix", 3],
-    ["Final Cut Pro", 2],
     ["Adobe Creative Cloud", 2],
     ["Cloudflare", 2],
     ["Digital Ocean", 2],
-    ["MS Office", 2],
     ["Sentry.io", 2],
-    ["GCP", 1],
     ["Fusion 360", 1],
 ]
 
 const uniSkills: BadgeType[] = [
     ["C", 2],
     ["Java", 2],
-    ["LaTeX", 2],
-    ["Unit Testing", 2],
     ["C++", 1],
-    ["Scrum", 1],
     ["Assembly", 1]
 ]
 
-const otherSkills: BadgeType[] = [
-    ["MySQL", 2],
-    ["PHP", 2],
-    ["jQuery", 2],
+const uniSubjects: string[] = [
+    "Artificial Intelligence",
+    "Computer Vision",
+    "Economics of Financial Markets",
+    "Computational Biology",
+    "Speech Processing",
+    "Information Security"
+]
+
+const softSkills: string[] = [
+    "Adapting",
+    "Independent",
+    "Perfectionist",
+    "Problem solving",
+    "Patient",
+    "Trustworthy",
+    "Persevering",
+    "Stress-Resistant"
 ]
 
 const skillBadges = (badges: BadgeType[]) => {
     const results = badges.map((b) => (
         <div className="single-skill">
             <span style={{paddingRight: "0.25rem"}}>{b[0]}</span>{skillBadgeIcon(b[1])}
+        </div>
+    ))
+    return (
+        <div className="skill-badges">
+            {results}
+        </div>
+    )
+}
+
+const skillTags = (badges: string[]) => {
+    const results = badges.map((b) => (
+        <div className="single-skill">
+            <span style={{padding: "0 0.25rem"}}>{b}</span>
         </div>
     ))
     return (
@@ -117,7 +138,7 @@ const SkillList: FC = () => (
                         {skillBadgeIcon(1)}
                     </div>
                 </div>
-                <h3 className="mb-0">Current Skills</h3>
+                <h3 className="mb-0">Active Skills</h3>
                 <div className="text-lead">
                     Used in the past year
                 </div>
@@ -132,11 +153,13 @@ const SkillList: FC = () => (
                     Used for projects at some point
                 </div>
                 {skillBadges(uniSkills)}
-                <h3 className="mb-0">Other skill</h3>
+                <h3 className="mb-0">University Courses</h3>
                 <div className="text-lead">
-                    Used for project in the past but moved on from
+                    Notable or favorite university courses
                 </div>
-                {skillBadges(otherSkills)}
+                {skillTags(uniSubjects)}
+                <h3 className="mb-0">Soft skills</h3>
+                {skillTags(softSkills)}
             </div>
         </div>
     </section>
