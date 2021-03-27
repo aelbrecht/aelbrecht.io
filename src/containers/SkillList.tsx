@@ -62,7 +62,7 @@ const softSkills: string[] = [
 
 const skillBadges = (badges: BadgeType[]) => {
     const results = badges.map((b) => (
-        <div className="single-skill">
+        <div className="single-skill" key={b[0]}>
             <span style={{paddingRight: "0.25rem"}}>{b[0]}</span>{skillBadgeIcon(b[1])}
         </div>
     ))
@@ -75,7 +75,7 @@ const skillBadges = (badges: BadgeType[]) => {
 
 const skillTags = (badges: string[]) => {
     const results = badges.map((b) => (
-        <div className="single-skill">
+        <div className="single-skill" key={b}>
             <span style={{padding: "0 0.25rem"}}>{b}</span>
         </div>
     ))
@@ -95,12 +95,12 @@ const skillBadgeIcon = (level: number) => {
     } else {
         for (let i = 0; i < level; i++) {
             rings.push(
-                <FontAwesomeIcon className={`skill-level skill-level-${level}`} icon={faCircle}/>
+                <FontAwesomeIcon key={"j-" + i} className={`skill-level skill-level-${level}`} icon={faCircle}/>
             )
         }
         for (let i = 0; i < 3 - level; i++) {
             rings.push(
-                <FontAwesomeIcon className={`skill-level skill-level-${level}`} icon={faCircleHollow}/>
+                <FontAwesomeIcon key={"i-" + i} className={`skill-level skill-level-${level}`} icon={faCircleHollow}/>
             )
         }
     }

@@ -34,49 +34,43 @@ const MatthysWines: FC = () => (
                     </a>
                 </div>
                 <h4 className="mb-1">Front-End</h4>
-                <p className="mt-0">
-                    <h5 className="mb-0">Styling | 2019 </h5>
-                    <br/>
+                <h5 className="mb-0">Styling | 2019 </h5>
+                <p className="story-text">
                     The layout was designed and coded from scratch using the styling
                     framework <Link to="https://picturepan2.github.io/spectre/">Spectre.css</Link> as a base. The whole
                     frontend uses React and TypeScript for readability and type checking. Expanding on the framework,
                     minimalism combined with images and iconography make up the styling of the site to strike
                     a balance between information and usability.
                 </p>
-                <p>
-                    <h5 className="mb-0">Lightning-fast catalogue | 2019</h5>
-                    <br/>
+                <h5 className="mb-0">Lightning-fast catalogue | 2019</h5>
+                <p className="story-text">
                     By using extensive client-side caching,
                     a <Link to="https://www.matthys-wines.com/en/wines">product catalog</Link> was
                     created which
                     can be filtered instantly, giving users the flexibility of searching without
                     having to wait on server round trips.
                 </p>
-                <p>
-                    <h5 className="mb-0">Payment system | 2019</h5>
-                    <br/>
+                <h5 className="mb-0">Payment system | 2019</h5>
+                <p className="story-text">
                     <Link to="https://www.europabank.be/">Europabank</Link> was integrated into the platform, providing
                     a secure and tamper-proof payment system.
                 </p>
-                <p>
-                    <h5 className="mb-0">Accounts and Members | 2020</h5>
-                    <br/>
+                <h5 className="mb-0">Accounts and Members | 2020</h5>
+                <p className="story-text">
                     <Link to="https://auth0.com/">Auth0</Link> was added to quickly deploy a user account platform
                     on which users can view order history. For horeca, a members-only catalog and checkout was created
                     to digitize their ordering process.
                 </p>
-                <p>
-                    <h5 className="mb-0">High level admin panel | 2020</h5>
-                    <br/>
+                <h5 className="mb-0">High level admin panel | 2020</h5>
+                <p className="story-text">
                     To reduce the amount of time that is consumed adding new editors and features to the
                     admin panel, a lot of components were created to make it highly customizable and fast to rework.
                     In total, the admin panel is only a couple thousand lines long but can manipulate all
                     multilingual and static content.
                 </p>
                 <h4 className="mb-1">Back-End</h4>
-                <p className="mt-0">
-                    <h5 className="mb-0">Microservices | 2021</h5>
-                    <br/>
+                <h5 className="mb-0">Microservices | 2021</h5>
+                <p className="story-text">
                     The back-end is structured as a collection of microservices, giving the advantage of
                     having multiple small code bases for each core functionality of the platform that can be easily
                     deployed using Docker Compose.
@@ -84,18 +78,16 @@ const MatthysWines: FC = () => (
                     specific third-party libraries are needed or when non-strictly typed code greatly reduced
                     development time.
                 </p>
-                <p>
-                    <h5 className="mb-0">Dynamic document store | 2020</h5>
-                    <br/>
+                <h5 className="mb-0">Dynamic document store | 2020</h5>
+                <p className="story-text">
                     A custom service was developed as a layer on top
                     of <Link to="https://www.mongodb.com/">MongoDB</Link> to remove the need of statically defined
                     databases tables. Using <Link to="https://json-schema.org/">JSON Schema</Link> and core ideas from
                     the <Link to="https://jsonapi.org/">JSON:API</Link>, a list of schemas are used to dynamically
                     set up endpoints at runtime, which validates all incoming documents and guarantees data integrity.
                 </p>
-                <p>
-                    <h5 className="mb-0">Email | 2020</h5>
-                    <br/>
+                <h5 className="mb-0">Email | 2020</h5>
+                <p className="story-text">
                     Order confirmations and occasional newsletters are designed
                     using <Link to="https://mjml.io/">MJML</Link> and converted
                     to HTML when sent with <Link to="https://www.mailgun.com/">Mailgun</Link>. In practice, this gave a

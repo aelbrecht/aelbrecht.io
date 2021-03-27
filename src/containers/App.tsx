@@ -6,10 +6,27 @@ import AboutMe from "./AboutMe"
 import HolidaySuites from "./HolidaySuites"
 import PersonalWork from "./PersonalWork"
 import LandingBanner from "./LandingBanner"
-import Link from "./Link";
+import Link from "./Link"
+import {Helmet} from "react-helmet"
 
 const App: FC = () => (
     <div>
+        <Helmet>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Person",
+                    "email": "mailto:rudolf@aelbrecht.io",
+                    "image": "https://static.aelbrecht.io/portfolio/rudolf.jpg",
+                    "jobTitle": "Student",
+                    "name": "Rudolf Aelbrecht",
+                    "givenName": "Rudolf",
+                    "familyName": "Aelbrecht",
+                    "birthDate": "1998-01-19",
+                    "url": "https://rudolf.aelbrecht.io"
+                })}
+            </script>
+        </Helmet>
         <LandingBanner/>
         <ContactMenu/>
         <AboutMe/>

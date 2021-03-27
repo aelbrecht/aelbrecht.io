@@ -8,9 +8,8 @@ const PersonalWork: FC = () => (
             <div className="story-padding">
                 <h3 className="work-title ">Side Projects</h3>
                 <p>A collections of stuff I've made in my free time.</p>
-                <p>
-                    <h5>Dust Lake</h5>
-                    <br/>
+                <h5>Dust Lake</h5>
+                <p className="mt-0">
                     Most of the work, like the admin website and document logic used in the Matthys Wines platform, was
                     developed in my free time as a challenge to create the most maintainable project possible. In the
                     end, I integrated the microservices into the stack of already existing
@@ -20,9 +19,8 @@ const PersonalWork: FC = () => (
                     runs in production. Multiple iterations gave me a good idea on how to develop an intuitive GUI
                     that a user with any computer experience can use.
                 </p>
-                <p className="story-text">
-                    <h5>2D Graphics and Stock Trading</h5>
-                    <br/>
+                <h5>2D Graphics and Stock Trading</h5>
+                <p className="mt-0">
                     As a challenge to learn 2D graphics, I've started to learn
                     the <Link to="https://ebiten.org/">ebiten</Link> library in Go. With simplex
                     noise, I <Link to="https://github.com/aelbrecht/iron-made">developed an algorithm</Link> to generate
@@ -40,9 +38,8 @@ const PersonalWork: FC = () => (
                     script, could make simulated trades, and communicate them to the Go program, but was not developed
                     further to make any useful decisions.
                 </p>
-                <p>
-                    <h5>3D printing</h5>
-                    <br/>
+                <h5>3D printing</h5>
+                <p className="mt-0">
                     Being fascinated by small electronics and IOT devices, I've tried a handful of times to create some
                     3D-printed models and to wire up some small devices. A couple of those successful projects was a
                     small car to distract my cats with some prototypes for a robot arm and an automated irrigation
