@@ -20,6 +20,7 @@ const activeSkills: BadgeType[] = [
     ["G Analytics", 2],
     ["Arduino", 2],
     ["LaTeX", 2],
+    ["Unix Shell", 2],
     ["S3", 1],
 ]
 
@@ -37,7 +38,14 @@ const uniSkills: BadgeType[] = [
     ["C", 2],
     ["Java", 2],
     ["C++", 1],
-    ["Assembly", 1]
+    ["Assembly", 1],
+    ["Spark", 1],
+    ["Spring", 1],
+    ["OpenCV", 1],
+    ["ML", 1],
+    ["Redux", 1],
+    ["GLFW/OpenGL", 1],
+    ["R", 1],
 ]
 
 const uniSubjects: string[] = [
@@ -45,6 +53,7 @@ const uniSubjects: string[] = [
     "Computer Vision",
     "Economics of Financial Markets",
     "Computational Biology",
+    "Computer Graphics",
     "Speech Processing",
     "Information Security"
 ]
