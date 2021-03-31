@@ -61,12 +61,6 @@ const HolidaySuites: FC = () => (
                     alt="hs promo code"
                 />
                 <p>Promo code editor</p>
-                <img
-                    src="https://static.aelbrecht.io/portfolio/hs-modify.png"
-                    className="story-image-display"
-                    alt="hs price editor"
-                />
-                <p>Dynamic price editor</p>
             </div>
         </div>
     </section>
