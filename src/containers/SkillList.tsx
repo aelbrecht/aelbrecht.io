@@ -44,15 +44,13 @@ const uniSkills: BadgeType[] = [
     ["OpenCV", 1],
     ["ML", 1],
     ["Redux", 1],
-    ["GLFW/OpenGL", 1],
-    ["R", 1],
+    ["GLFW/OpenGL", 1]
 ]
 
 const uniSubjects: string[] = [
     "Artificial Intelligence",
     "Computer Vision",
     "Economics of Financial Markets",
-    "Computational Biology",
     "Computer Graphics",
     "Speech Processing",
     "Information Security"
