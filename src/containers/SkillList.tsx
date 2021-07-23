@@ -14,45 +14,42 @@ const activeSkills: BadgeType[] = [
     ["CSS/SCSS", 3],
     ["Node.js", 3],
     ["HTML", 3],
+    ["React Native", 2],
     ["Docker", 2],
     ["MongoDB", 2],
     ["SQL", 2],
     ["G Analytics", 2],
     ["Arduino", 2],
     ["LaTeX", 2],
-    ["Unix Shell", 2],
-    ["S3", 1],
+    ["Shell Scripting", 2]
 ]
 
 const passiveSkills: BadgeType[] = [
     ["JetBrains", 3],
-    ["Unix", 3],
-    ["Adobe Creative Cloud", 2],
+    ["Linux/MacOS", 3],
+    ["Creative Cloud", 2],
     ["Cloudflare", 2],
     ["Digital Ocean", 2],
-    ["Sentry.io", 2],
-    ["Fusion 360", 1],
+    ["GCP", 2],
+    ["Sentry.io", 2]
 ]
 
 const uniSkills: BadgeType[] = [
     ["C", 2],
     ["Java", 2],
+    ["OpenCV", 2],
     ["C++", 1],
     ["Assembly", 1],
     ["Spark", 1],
-    ["Spring", 1],
-    ["OpenCV", 1],
-    ["ML", 1],
-    ["Redux", 1],
     ["GLFW/OpenGL", 1]
 ]
 
 const uniSubjects: string[] = [
     "Artificial Intelligence",
     "Computer Vision",
-    "Economics of Financial Markets",
     "Computer Graphics",
-    "Speech Processing",
+    "Functional Programming",
+    "Economics of Financial Markets",
     "Information Security"
 ]
 
@@ -63,7 +60,6 @@ const softSkills: string[] = [
     "Problem solving",
     "Patient",
     "Trustworthy",
-    "Persevering",
     "Stress-Resistant"
 ]
 
