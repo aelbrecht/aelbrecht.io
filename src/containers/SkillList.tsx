@@ -46,11 +46,9 @@ const uniSkills: BadgeType[] = [
 
 const uniSubjects: string[] = [
     "Artificial Intelligence",
-    "Computer Vision",
     "Computer Graphics",
     "Functional Programming",
     "Economics of Financial Markets",
-    "Information Security"
 ]
 
 const softSkills: string[] = [
