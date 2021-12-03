@@ -93,33 +93,6 @@ const AboutMe: FC = () => (
                             </div>
                         </div>
                     </div>
-                    <h3>Languages</h3>
-                    <table className="language-segment">
-                        <thead>
-                        <tr>
-                            <th></th>
-                            <th>Speaking</th>
-                            <th>Writing</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Dutch</td>
-                            <td className="lang-stat lang-good">native</td>
-                            <td className="lang-stat lang-good">native</td>
-                        </tr>
-                        <tr>
-                            <td>English</td>
-                            <td className="lang-stat lang-good">good</td>
-                            <td className="lang-stat lang-good">good</td>
-                        </tr>
-                        <tr>
-                            <td>Russian</td>
-                            <td className="lang-stat lang-bad">basics</td>
-                            <td className="lang-stat">none</td>
-                        </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
             <div className="flex-inner-column flex-inner-column-30 p2 portrait-desktop">

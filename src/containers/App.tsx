@@ -4,7 +4,6 @@ import SkillList from "./SkillList"
 import ContactMenu from "./ContactMenu"
 import AboutMe from "./AboutMe"
 import HolidaySuites from "./HolidaySuites"
-import PersonalWork from "./PersonalWork"
 import LandingBanner from "./LandingBanner"
 import Link from "./Link"
 import {Helmet} from "react-helmet"
@@ -38,7 +37,6 @@ const App: FC = () => (
                         <h2>My Work</h2>
                         <MatthysWines/>
                         <HolidaySuites/>
-                        <PersonalWork/>
                     </div>
                 </div>
             </div>

@@ -10,74 +10,40 @@ const activeSkills: BadgeType[] = [
     ["Python", 4],
     ["TypeScript", 4],
     ["React", 4],
-    ["JavaScript", 3],
-    ["CSS/SCSS", 3],
-    ["Node.js", 3],
-    ["HTML", 3],
+    ["SCSS", 3],
+    ["Node", 3],
+    ["Docker", 3],
+    ["Jupyter", 3],
     ["React Native", 2],
-    ["Docker", 2],
     ["MongoDB", 2],
     ["SQL", 2],
-    ["G Analytics", 2],
-    ["Arduino", 2],
-    ["LaTeX", 2],
-    ["Shell Scripting", 2]
+    ["Arduino/Espressif", 2]
 ]
 
 const passiveSkills: BadgeType[] = [
-    ["JetBrains", 3],
-    ["Linux/MacOS", 3],
-    ["Creative Cloud", 2],
+    ["Unix", 4],
     ["Cloudflare", 2],
     ["Digital Ocean", 2],
-    ["GCP", 2],
-    ["Sentry.io", 2]
+    ["Creative Cloud", 2],
+    ["Netlify", 2],
+    ["GCP", 2]
 ]
 
 const uniSkills: BadgeType[] = [
     ["C", 2],
     ["Java", 2],
     ["OpenCV", 2],
+    ["Keras", 2],
     ["C++", 1],
     ["Assembly", 1],
     ["Spark", 1],
     ["GLFW/OpenGL", 1]
 ]
 
-const uniSubjects: string[] = [
-    "Artificial Intelligence",
-    "Computer Graphics",
-    "Functional Programming",
-    "Economics of Financial Markets",
-]
-
-const softSkills: string[] = [
-    "Adapting",
-    "Independent",
-    "Perfectionist",
-    "Problem solving",
-    "Patient",
-    "Trustworthy",
-    "Stress-Resistant"
-]
-
 const skillBadges = (badges: BadgeType[]) => {
     const results = badges.map((b) => (
         <div className="single-skill" key={b[0]}>
             <span style={{paddingRight: "0.25rem"}}>{b[0]}</span>{skillBadgeIcon(b[1])}
-        </div>
-    ))
-    return (
-        <div className="skill-badges">
-            {results}
-        </div>
-    )
-}
-
-const skillTags = (badges: string[]) => {
-    const results = badges.map((b) => (
-        <div className="single-skill" key={b}>
-            <span style={{padding: "0 0.25rem"}}>{b}</span>
         </div>
     ))
     return (
@@ -154,13 +120,6 @@ const SkillList: FC = () => (
                     Used for projects at some point
                 </div>
                 {skillBadges(uniSkills)}
-                <h3 className="mb-0">University Courses</h3>
-                <div className="text-lead">
-                    Notable or favorite university courses
-                </div>
-                {skillTags(uniSubjects)}
-                <h3 className="mb-0">Soft skills</h3>
-                {skillTags(softSkills)}
             </div>
         </div>
     </section>
