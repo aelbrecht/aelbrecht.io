@@ -8,36 +8,33 @@ type BadgeType = [string, number]
 const activeSkills: BadgeType[] = [
     ["Go", 4],
     ["Python", 4],
-    ["TypeScript", 4],
-    ["React", 4],
-    ["SCSS", 3],
-    ["Node", 3],
-    ["Docker", 3],
-    ["Jupyter", 3],
-    ["React Native", 2],
-    ["MongoDB", 2],
-    ["SQL", 2],
-    ["Arduino/Espressif", 2]
+    ["C++", 3],
 ]
 
 const passiveSkills: BadgeType[] = [
     ["Unix", 4],
+    ["Docker", 3],
     ["Cloudflare", 2],
-    ["Digital Ocean", 2],
+    ["Compute Engine", 2],
+    ["Droplets", 2],
     ["Creative Cloud", 2],
-    ["Netlify", 2],
-    ["GCP", 2]
+]
+
+const recentSkills: BadgeType[] = [
+    ["React", 4],
+    ["TypeScript", 4],
+    ["SCSS", 3],
+    ["MongoDB", 2],
+    ["SQL", 2],
+    ["C", 2],
+    ["Arduino", 2],
+    ["CMake", 1],
 ]
 
 const uniSkills: BadgeType[] = [
-    ["C", 2],
-    ["Java", 2],
     ["OpenCV", 2],
-    ["Keras", 2],
-    ["C++", 1],
-    ["Assembly", 1],
-    ["Spark", 1],
-    ["GLFW/OpenGL", 1]
+    ["Assembly", 2],
+    ["Keras", 1],
 ]
 
 const skillBadges = (badges: BadgeType[]) => {
@@ -79,45 +76,24 @@ const SkillList: FC = () => (
         <div className="flex-full-column flex-full-column-70 p2">
             <div className="w100">
                 <h2>Skills</h2>
-                <div className="skill-badges">
-                    <div className="single-skill">
-                                <span style={{paddingRight: "0.25rem"}}>
-                                    Most Used
-                                </span>
-                        {skillBadgeIcon(4)}
-                    </div>
-                    <div className="single-skill">
-                                <span style={{paddingRight: "0.25rem"}}>
-                                    Advanced
-                                </span>
-                        {skillBadgeIcon(3)}
-                    </div>
-                    <div className="single-skill">
-                                <span style={{paddingRight: "0.25rem"}}>
-                                    Intermediate
-                                </span>
-                        {skillBadgeIcon(2)}
-                    </div>
-                    <div className="single-skill">
-                                <span style={{paddingRight: "0.25rem"}}>
-                                    Novice
-                                </span>
-                        {skillBadgeIcon(1)}
-                    </div>
-                </div>
                 <h3 className="mb-0">Active Skills</h3>
                 <div className="text-lead">
-                    Used in the past year
+                    from working in a professional context
                 </div>
                 {skillBadges(activeSkills)}
+                <h3 className="mb-0">Recent Skills</h3>
+                <div className="text-lead">
+                    from past work experiences
+                </div>
+                {skillBadges(recentSkills)}
                 <h3 className="mb-0">Passive Skills</h3>
                 <div className="text-lead">
-                    Actively used programs or environments
+                    from spending many hours with given topic
                 </div>
                 {skillBadges(passiveSkills)}
                 <h3 className="mb-0">University Skills</h3>
                 <div className="text-lead">
-                    Used for projects at some point
+                    that still peak my interest
                 </div>
                 {skillBadges(uniSkills)}
             </div>

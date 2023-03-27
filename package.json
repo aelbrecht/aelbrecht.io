@@ -3,27 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@types/node": "^16.11.11",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@types/react-helmet": "^6.1.0",
-    "@types/react-lazyload": "^3.1.0"
+    "@types/node": "^18.15.10",
+    "@types/react": "^18.0.30",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-helmet": "^6.1.6",
+    "@types/react-lazyload": "^3.2.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.29",
-    "@fortawesome/free-brands-svg-icons": "^5.13.1",
-    "@fortawesome/free-regular-svg-icons": "^5.15.2",
-    "@fortawesome/free-solid-svg-icons": "^5.13.1",
-    "@fortawesome/react-fontawesome": "^0.1.11",
-    "node-sass": "^6.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "node-sass": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-lazyload": "^3.2.0",
-    "react-scripts": "4.0.3",
-    "sass-loader": "^12.1.0",
-    "spectre.css": "^0.5.9",
-    "typescript": "^4.1.2"
+    "react-scripts": "5.0.1",
+    "sass-loader": "^13.2.2",
+    "typescript": "^5.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

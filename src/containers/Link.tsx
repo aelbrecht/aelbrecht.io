@@ -1,6 +1,6 @@
 import React, {FC} from "react"
 
-const Link: FC<{ to: string }> = ({to, children}) => (
+const Link: FC<{ to: string, children: React.ReactNode }> = ({to, children}) => (
     <a
         href={to}
         target="_blank"

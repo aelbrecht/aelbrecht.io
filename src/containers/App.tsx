@@ -34,9 +34,11 @@ const App: FC = () => (
             <div className="flex-columns ">
                 <div className="flex-full-column flex-full-column-70 p2">
                     <div className="w100">
-                        <h2>My Work</h2>
-                        <MatthysWines/>
-                        <HolidaySuites/>
+                        <h2>Past Work</h2>
+                        <div className="work-story-container">
+                            <MatthysWines/>
+                            <HolidaySuites/>
+                        </div>
                     </div>
                 </div>
             </div>

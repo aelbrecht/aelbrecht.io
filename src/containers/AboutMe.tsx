@@ -14,9 +14,8 @@ const Portrait = () => (
         </div>
         <div className="profile-description">
             <p>
-                Fascinated by space, science and computers. Striving to build cloud-based applications with clean code
-                and minimalist interfaces. Currently studying Computer Science and working on professional projects in
-                my free time.
+                Fascinated by space, science and RISC. Striving to build high-performance applications with clean
+                code and minimalist interfaces.
             </p>
         </div>
     </div>
@@ -51,7 +50,7 @@ const AboutMe: FC = () => (
                     <div className="education-segment">
                         <EduBlock
                             title={"MSc in Computer Science"}
-                            location={"Ghent University | 2020 - now"}
+                            location={"Ghent University | 2020 - 2023"}
                         />
                         <EduBlock
                             title={"BSc in Computer Science"}
@@ -64,18 +63,28 @@ const AboutMe: FC = () => (
                     </div>
                     <h3>Experiences</h3>
                     <div className="experience-segment">
+                        <div className="exp-block exp-esko">
+                            <div className="exp-title">
+                                Esko
+                            </div>
+                            <div className="exp-function">
+                                Junior Software Engineer | 2022 - now
+                            </div>
+                            <div className="exp-description">
+                            </div>
+                        </div>
                         <div className="exp-block exp-matthys-wines">
                             <div className="exp-title">
                                 Matthys Wines
                             </div>
                             <div className="exp-function">
-                                Full Stack Developer | 2019 - 2021
+                                Freelance | 2019 - 2021
                             </div>
                             <div className="exp-description">
-                                Created a custom e-commerce platform to be scalable and maintainable
-                                by a single person. Designed front-end, implemented logic to filter an expansive
-                                collection of wines in real time and deployed the platform as a cluster of
-                                microservices.
+                                Designed the front-end for browsing and shopping
+                                through an expansive collection of wines. Built a highly scalable back-end as a
+                                combination
+                                of tiny, purpose-build microservices, each using the language most suited for its task.
                             </div>
                         </div>
                         <div className="exp-block exp-holiday-suites">
@@ -86,10 +95,9 @@ const AboutMe: FC = () => (
                                 Web Developer | 2016 - 2018
                             </div>
                             <div className="exp-description">
-                                Responsible for creating an internal platform that managed web-payments, promo codes,
-                                and gift cards. Expanded on this by reworking existing destination pages with a
-                                cleaner and interactive, layout adding features like package creation with an
-                                added inventory management system.
+                                Created many internal tools for managing payments, redeemable codes, accommodations,
+                                events, inventory and bookings. Integrated payment providers as part of an existing
+                                e-commerce site. Built product pages using dynamic pages replacing existing static ones.
                             </div>
                         </div>
                     </div>

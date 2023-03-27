@@ -371,6 +371,10 @@ a {
   .exp-holiday-suites {
     background-image: url("https://static.aelbrecht.io/portfolio/holiday-suites.jpg");
   }
+
+  .exp-esko {
+    background-image: url("https://static.aelbrecht.io/portfolio/esko-2.jpg");
+  }
 }
 
 .language-segment {
@@ -451,11 +455,12 @@ a {
 
   .story-body, .story-image {
     flex-grow: 1;
-    min-width: 50%;
+    min-width: calc(50% - 10px);
+    margin: 10px;
   }
 
   .story-padding {
-    padding: 0.5rem 2rem;
+    padding: 0.75rem 1.75rem;
 
     @media screen and (max-width: 1000px) {
       padding: 0;
