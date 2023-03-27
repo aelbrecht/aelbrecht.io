@@ -12,6 +12,22 @@ const MenuItem: FC<MenuItemInterface> = p => (
     </a>
 )
 
+const randomTitles: string[] = [
+    "redstone engineer",
+    "cstring to stdstring translator",
+    "duplicate symbol investigator",
+    "deferrer of writing unit tests",
+    "ninja install forgetter",
+    "consumer of file descriptors",
+    "tar xzvf",
+    "yarn install",
+    "starting version xxx.xx-x-arch",
+    "lambda expressionist",
+    "exit code specialist",
+    "RelWithDebInfo debugger"
+]
+const titleIndex = Math.round(Math.random() * (randomTitles.length - 1));
+
 const LandingBanner: FC = () => (
     <div className="page-filler page-filler-70">
         <div className="flex-columns landing-banner">
@@ -19,7 +35,7 @@ const LandingBanner: FC = () => (
                 <div className="element-name">
                     <div className="flex-center">
                         <div className="lead">
-                            developer
+                            {randomTitles[titleIndex].toLowerCase()}
                         </div>
                         <h1 className="name">Rudolf Aelbrecht</h1>
                         <div className="lead">
