@@ -26,12 +26,6 @@ const recentSkills: BadgeType[] = [
     ["Arduino", 0],
 ]
 
-const uniSkills: BadgeType[] = [
-    ["OpenCV", 2],
-    ["Assembly", 2],
-    ["Keras", 1],
-]
-
 const skillBadges = (badges: BadgeType[]) => {
     const results = badges.map((b) => (
         <div className="single-skill" key={b[0]}>
