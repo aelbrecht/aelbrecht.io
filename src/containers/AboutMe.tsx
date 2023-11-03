@@ -68,9 +68,14 @@ const AboutMe: FC = () => (
                                 Esko
                             </div>
                             <div className="exp-function">
-                                Junior Software Engineer | 2022 - now
+                                Software Engineer | 2023 - present
+                            </div>
+                            <div className="exp-function">
+                                Junior Software Engineer | 2022 - 2023
                             </div>
                             <div className="exp-description">
+                                Designing and optimizing C++ algorithms for precise 2D vector graphics within a
+                                product-focused R&D environment.
                             </div>
                         </div>
                         <div className="exp-block exp-matthys-wines">

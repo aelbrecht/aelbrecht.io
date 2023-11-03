@@ -8,27 +8,22 @@ type BadgeType = [string, number]
 const activeSkills: BadgeType[] = [
     ["Go", 4],
     ["Python", 4],
-    ["C++", 3],
+    ["C++", 4],
 ]
 
 const passiveSkills: BadgeType[] = [
-    ["Unix", 4],
-    ["Docker", 3],
-    ["Cloudflare", 2],
-    ["Compute Engine", 2],
-    ["Droplets", 2],
-    ["Creative Cloud", 2],
+    ["Unix", 0],
+    ["Docker", 0],
+    ["Cloudflare", 0],
 ]
 
 const recentSkills: BadgeType[] = [
-    ["React", 4],
-    ["TypeScript", 4],
-    ["SCSS", 3],
-    ["MongoDB", 2],
-    ["SQL", 2],
-    ["C", 2],
-    ["Arduino", 2],
-    ["CMake", 1],
+    ["React", 0],
+    ["TypeScript", 0],
+    ["SCSS", 0],
+    ["MongoDB", 0],
+    ["CMake", 0],
+    ["Arduino", 0],
 ]
 
 const uniSkills: BadgeType[] = [
@@ -51,6 +46,10 @@ const skillBadges = (badges: BadgeType[]) => {
 }
 
 const skillBadgeIcon = (level: number) => {
+
+    if (level === 0)
+        return null
+
     const rings = []
     if (level === 4) {
         return (
@@ -91,11 +90,6 @@ const SkillList: FC = () => (
                     from spending many hours with given topic
                 </div>
                 {skillBadges(passiveSkills)}
-                <h3 className="mb-0">University Skills</h3>
-                <div className="text-lead">
-                    that still peak my interest
-                </div>
-                {skillBadges(uniSkills)}
             </div>
         </div>
     </section>
