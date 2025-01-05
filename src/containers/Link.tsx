@@ -1,4 +1,4 @@
-import React, {FC} from "react"
+import {FC} from "react";
 
 const Link: FC<{ to: string, children: React.ReactNode }> = ({to, children}) => (
     <a

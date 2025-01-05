@@ -1,4 +1,6 @@
-import React, {FC} from "react"
+import {FC} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAngleRight} from "@fortawesome/free-solid-svg-icons";
 
 const Portrait = () => (
     <div className="portrait">
@@ -63,14 +65,28 @@ const AboutMe: FC = () => (
                     </div>
                     <h3>Experiences</h3>
                     <div className="experience-segment">
+                        <div className="exp-block exp-st">
+                            <div className="exp-title">
+                                ST Engineering iDirect
+                            </div>
+                            <div className="exp-function">
+                                <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
+                                Software Engineer | 2024 - now
+                            </div>
+                            <div className="exp-description">
+                                C++ development on embedded systems.
+                            </div>
+                        </div>
                         <div className="exp-block exp-esko">
                             <div className="exp-title">
                                 Esko
                             </div>
                             <div className="exp-function">
-                                Software Engineer | 2023 - present
+                                <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
+                                Software Engineer | 2023 - 2024
                             </div>
                             <div className="exp-function">
+                                <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
                                 Junior Software Engineer | 2022 - 2023
                             </div>
                             <div className="exp-description">
@@ -83,6 +99,7 @@ const AboutMe: FC = () => (
                                 Matthys Wines
                             </div>
                             <div className="exp-function">
+                                <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
                                 Freelance | 2019 - 2021
                             </div>
                             <div className="exp-description">
@@ -97,6 +114,7 @@ const AboutMe: FC = () => (
                                 Holiday Suites
                             </div>
                             <div className="exp-function">
+                                <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
                                 Web Developer | 2016 - 2018
                             </div>
                             <div className="exp-description">

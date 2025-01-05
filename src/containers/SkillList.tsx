@@ -1,7 +1,7 @@
-import React, {FC} from "react"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faCircle, faStar} from "@fortawesome/free-solid-svg-icons"
 import {faCircle as faCircleHollow} from "@fortawesome/free-regular-svg-icons"
+import {FC} from "react";
 
 type BadgeType = [string, number]
 

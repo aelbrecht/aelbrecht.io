@@ -1,12 +1,10 @@
-import React, {FC} from 'react'
-import MatthysWines from "./MatthysWines"
 import SkillList from "./SkillList"
 import ContactMenu from "./ContactMenu"
 import AboutMe from "./AboutMe"
-import HolidaySuites from "./HolidaySuites"
 import LandingBanner from "./LandingBanner"
 import Link from "./Link"
 import {Helmet} from "react-helmet"
+import {FC} from "react";
 
 const App: FC = () => (
     <div>
@@ -30,19 +28,6 @@ const App: FC = () => (
         <ContactMenu/>
         <AboutMe/>
         <SkillList/>
-        <div className="page-filler" id="experience">
-            <div className="flex-columns ">
-                <div className="flex-full-column flex-full-column-70 p2">
-                    <div className="w100">
-                        <h2>Past Work</h2>
-                        <div className="work-story-container">
-                            <MatthysWines/>
-                            <HolidaySuites/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div style={{height: "3rem"}}/>
         <ContactMenu/>
         <footer>
