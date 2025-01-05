@@ -5,11 +5,6 @@ put my projects on. You won't find any comments though as all parts expect the s
 them.
 
 ```
-# run in development
 yarn install
-yarn start
-
-# build for production
-yarn install
-yarn build
+yarn run dev
 ```
