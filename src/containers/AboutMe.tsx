@@ -16,8 +16,7 @@ const Portrait = () => (
         </div>
         <div className="profile-description">
             <p>
-                Fascinated by space, science and RISC. Striving to build high-performance applications with clean
-                code and minimalist interfaces.
+                Fascinated by space, science, and RISC. Striving to build high-performance software with clean code and deliberately minimal interfaces.
             </p>
         </div>
     </div>
