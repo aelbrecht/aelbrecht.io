@@ -65,25 +65,13 @@ const AboutMe: FC = () => (
                     </div>
                     <h3>Experiences</h3>
                     <div className="experience-segment">
-                        <div className="exp-block exp-st">
-                            <div className="exp-title">
-                                ST Engineering iDirect
-                            </div>
-                            <div className="exp-function">
-                                <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
-                                Software Engineer | 2024 - now
-                            </div>
-                            <div className="exp-description">
-                                C++ development on embedded systems.
-                            </div>
-                        </div>
                         <div className="exp-block exp-esko">
                             <div className="exp-title">
                                 Esko
                             </div>
                             <div className="exp-function">
                                 <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
-                                Software Engineer | 2023 - 2024
+                                Software Engineer | 2023 - Now
                             </div>
                             <div className="exp-function">
                                 <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
