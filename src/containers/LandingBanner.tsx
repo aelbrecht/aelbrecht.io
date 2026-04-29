@@ -39,11 +39,11 @@ const LandingBanner: FC = () => (
                         </div>
                         <h1 className="name">Rudolf Aelbrecht</h1>
                         <div className="lead">
-                            <MenuItem href="#about-me" name="about me" prefix="001"/>
+                            <MenuItem href="#experience" name="work" prefix="001"/>
                             <br/>
                             <MenuItem href="#skills" name="skill" prefix="010"/>
                             <br/>
-                            <MenuItem href="#experience" name="my work" prefix="011"/>
+                            <MenuItem href="#about-me" name="about" prefix="011"/>
                         </div>
                     </div>
                 </div>

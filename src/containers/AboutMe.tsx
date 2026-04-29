@@ -12,11 +12,12 @@ const Portrait = () => (
         </div>
         <div className="portrait-description">
             <div className="portrait-name">Rudolf Aelbrecht</div>
-            <div className="portrait-birthdate">1998-01-19</div>
         </div>
         <div className="profile-description">
             <p>
-                Fascinated by space, science, and RISC. Striving to build high-performance software with clean code and deliberately minimal interfaces.
+                Building high-performance applications across desktop and web. Working with C++ and Go on core
+                functionality, data processing, and internal tooling, while leading frontend modernization with React
+                and TypeScript.
             </p>
         </div>
     </div>
@@ -44,26 +45,11 @@ const AboutMe: FC = () => (
             <div className="flex-inner-column flex-inner-column-30 p2 portrait-mobile">
                 <Portrait/>
             </div>
-            <div className="flex-inner-column flex-inner-column-70 p2" id="about-me">
+            <div className="flex-inner-column flex-inner-column-70 p2">
                 <div className="w100">
                     <h2>About me</h2>
-                    <h3>Education</h3>
-                    <div className="education-segment">
-                        <EduBlock
-                            title={"MSc in Computer Science"}
-                            location={"Ghent University | 2020 - 2023"}
-                        />
-                        <EduBlock
-                            title={"BSc in Computer Science"}
-                            location={"Ghent University | 2016 - 2020"}
-                        />
-                        <EduBlock
-                            title={"Science and Mathematics"}
-                            location={"Sint-Franciscus-Xaveriusinstituut | 2010 - 2016"}
-                        />
-                    </div>
-                    <h3>Experiences</h3>
-                    <div className="experience-segment">
+                    <h3 id="experience">Experience</h3>
+                    <div className="experience-segment" aria-labelledby="experience">
                         <div className="exp-block exp-esko">
                             <div className="exp-title">
                                 Esko
@@ -77,9 +63,16 @@ const AboutMe: FC = () => (
                                 Junior Software Engineer | 2022 - 2023
                             </div>
                             <div className="exp-description">
-                                Designing and optimizing C++ algorithms for precise 2D vector graphics within a
-                                product-focused R&D environment.
+                                Developing C++ components and algorithms for core PDF functionality, designing new
+                                features within an existing production system, and leading frontend modernization of a
+                                large web-based application using React and TypeScript.
                             </div>
+                            <ul className="exp-bullets">
+                                <li>C++ components and algorithms for core PDF functionality.</li>
+                                <li>Frontend modernization with React and TypeScript.</li>
+                                <li>Internal QA reporting platform in Go for automated testing.</li>
+                                <li>Jenkins-based build pipelines for continuous builds.</li>
+                            </ul>
                         </div>
                         <div className="exp-block exp-matthys-wines">
                             <div className="exp-title">
@@ -87,14 +80,19 @@ const AboutMe: FC = () => (
                             </div>
                             <div className="exp-function">
                                 <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
-                                Freelance | 2019 - 2021
+                                Independent Software Engineer | 2019 - 2024
                             </div>
                             <div className="exp-description">
-                                Designed the front-end for browsing and shopping
-                                through an expansive collection of wines. Built a highly scalable back-end as a
-                                combination
-                                of tiny, purpose-build microservices, each using the language most suited for its task.
+                                Built and deployed an e-commerce platform for retail and B2B clients. Designed
+                                containerized Go microservices using Docker and Docker Compose, integrated third-party
+                                services, developed React frontends, and operated the platform in production for ~5
+                                years with minimal downtime.
                             </div>
+                            <ul className="exp-bullets">
+                                <li>Containerized Go services with Docker and Docker Compose.</li>
+                                <li>React frontends for retail, B2B, and internal admin tools.</li>
+                                <li>Production operation for ~5 years with minimal downtime.</li>
+                            </ul>
                         </div>
                         <div className="exp-block exp-holiday-suites">
                             <div className="exp-title">
@@ -110,6 +108,21 @@ const AboutMe: FC = () => (
                                 e-commerce site. Built product pages using dynamic pages replacing existing static ones.
                             </div>
                         </div>
+                    </div>
+                    <h3 id="about-me">Education</h3>
+                    <div className="education-segment" aria-labelledby="about-me">
+                        <EduBlock
+                            title={"MSc in Computer Science"}
+                            location={"Ghent University | 2020 - 2023"}
+                        />
+                        <EduBlock
+                            title={"BSc in Computer Science"}
+                            location={"Ghent University | 2016 - 2020"}
+                        />
+                        <EduBlock
+                            title={"Science and Mathematics"}
+                            location={"Sint-Franciscus-Xaveriusinstituut | 2010 - 2016"}
+                        />
                     </div>
                 </div>
             </div>

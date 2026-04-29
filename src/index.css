@@ -226,7 +226,7 @@ h3:not(.work-title) {
 
 .banner-link {
   text-decoration: none;
-  color: #0a3d62;
+  color: #083452;
 }
 
 .page-filler .flex-columns {
@@ -242,7 +242,7 @@ h3:not(.work-title) {
 }
 
 .contact .contact-feature a {
-  color: #0a3d62;
+  color: #083452;
   padding: 0.5rem 1rem;
   white-space: nowrap;
   display: block;
@@ -250,7 +250,13 @@ h3:not(.work-title) {
 
 
 a {
-  color: #0a3d62 !important;
+  color: #083452 !important;
+}
+
+a:focus-visible {
+  border-radius: 2px;
+  outline: 3px solid #f6b93b;
+  outline-offset: 3px;
 }
 
 .contact .contact-feature .hide-mobile {
@@ -269,11 +275,11 @@ a {
 }
 
 .portrait {
-  max-width: 400px;
+  max-width: 340px;
 
   img {
     width: 100%;
-    max-width: 400px;
+    max-width: 340px;
   }
 
   .portrait-description {
@@ -285,10 +291,6 @@ a {
       text-align: right;
     }
 
-    .portrait-birthdate {
-      text-align: right;
-      font-size: 0.9rem;
-    }
   }
 
   .profile-description {
@@ -359,10 +361,22 @@ a {
   .exp-description {
     margin-top: 0.2rem;
     text-align: justify;
-    max-width: 420px;
+    max-width: 520px;
     font-size: 0.8rem;
     padding-left: 0.8rem;
     color: #333333;
+  }
+
+  .exp-bullets {
+    color: #333333;
+    font-size: 0.8rem;
+    margin: 0.35rem 0 0 0;
+    max-width: 520px;
+    padding-left: 1.9rem;
+  }
+
+  .exp-bullets li {
+    margin-bottom: 0.15rem;
   }
 
   .exp-matthys-wines {
@@ -485,6 +499,11 @@ a {
   color: #333;
   margin: 0.5rem 0 0 0;
   font-style: italic;
+}
+
+.skill-note-block {
+  max-width: 720px;
+  line-height: 1.45;
 }
 
 .work-story-container {

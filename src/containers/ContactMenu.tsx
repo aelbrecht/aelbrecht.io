@@ -1,11 +1,12 @@
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons"
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {IconProp} from "@fortawesome/fontawesome-svg-core"
 import {FC} from "react";
 
 interface ContactFeatureInterface {
     href: string
-    icon: any
+    icon: IconProp
     label: string
 }
 
