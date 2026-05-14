@@ -2,6 +2,7 @@ import SkillList from "./SkillList"
 import ContactMenu from "./ContactMenu"
 import AboutMe from "./AboutMe"
 import LandingBanner from "./LandingBanner"
+import ProjectList from "./ProjectList"
 import Link from "./Link"
 import {Helmet} from "react-helmet"
 import {FC} from "react";
@@ -40,6 +41,7 @@ const App: FC = () => (
         <LandingBanner/>
         <ContactMenu/>
         <AboutMe/>
+        <ProjectList/>
         <SkillList/>
         <div style={{height: "3rem"}}/>
         <ContactMenu/>

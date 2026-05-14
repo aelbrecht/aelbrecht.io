@@ -15,9 +15,13 @@ const Portrait = () => (
         </div>
         <div className="profile-description">
             <p>
-                Building high-performance applications across desktop and web. Working with C++ and Go on core
-                functionality, data processing, and internal tooling, while leading frontend modernization with React
-                and TypeScript.
+                Software engineer working across C++, Go, TypeScript, and React. I care about clear data flow, useful
+                internal tooling, maintainable interfaces, and software that can be operated and extended long after the
+                first version ships.
+            </p>
+            <p>
+                I enjoy the unglamorous parts of software: making systems understandable, keeping feedback loops short,
+                and making tools easier to operate.
             </p>
         </div>
     </div>
@@ -47,7 +51,7 @@ const AboutMe: FC = () => (
             </div>
             <div className="flex-inner-column flex-inner-column-70 p2">
                 <div className="w100">
-                    <h2>About me</h2>
+                    <h2 id="profile">Profile</h2>
                     <h3 id="experience">Experience</h3>
                     <div className="experience-segment" aria-labelledby="experience">
                         <div className="exp-block exp-esko">
@@ -56,22 +60,22 @@ const AboutMe: FC = () => (
                             </div>
                             <div className="exp-function">
                                 <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
-                                Software Engineer | 2023 - Now
+                                Software Engineer | 2023 - Present
                             </div>
                             <div className="exp-function">
                                 <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
                                 Junior Software Engineer | 2022 - 2023
                             </div>
                             <div className="exp-description">
-                                Developing C++ components and algorithms for core PDF functionality, designing new
-                                features within an existing production system, and leading frontend modernization of a
-                                large web-based application using React and TypeScript.
+                                Work on C++ functionality in a mature PDF-processing codebase, balancing feature
+                                development with existing architecture and product constraints. Also contribute to
+                                frontend modernization, internal Go tooling, and continuous-build workflows.
                             </div>
                             <ul className="exp-bullets">
-                                <li>C++ components and algorithms for core PDF functionality.</li>
-                                <li>Frontend modernization with React and TypeScript.</li>
-                                <li>Internal QA reporting platform in Go for automated testing.</li>
-                                <li>Jenkins-based build pipelines for continuous builds.</li>
+                                <li>Designed and implemented C++ components for PDF-related processing and feature development.</li>
+                                <li>Modernized a large React and TypeScript frontend while preserving product behavior.</li>
+                                <li>Built an internal QA reporting platform in Go for automated testing workflows.</li>
+                                <li>Maintained Jenkins-based build pipelines for continuous builds.</li>
                             </ul>
                         </div>
                         <div className="exp-block exp-matthys-wines">
@@ -83,15 +87,14 @@ const AboutMe: FC = () => (
                                 Independent Software Engineer | 2019 - 2024
                             </div>
                             <div className="exp-description">
-                                Built and deployed an e-commerce platform for retail and B2B clients. Designed
-                                containerized Go microservices using Docker and Docker Compose, integrated third-party
-                                services, developed React frontends, and operated the platform in production for ~5
-                                years with minimal downtime.
+                                Built and operated a Go and React e-commerce platform serving retail and B2B workflows,
+                                including ordering, admin tooling, third-party integrations, and production maintenance
+                                over roughly five years.
                             </div>
                             <ul className="exp-bullets">
                                 <li>Containerized Go services with Docker and Docker Compose.</li>
                                 <li>React frontends for retail, B2B, and internal admin tools.</li>
-                                <li>Production operation for ~5 years with minimal downtime.</li>
+                                <li>Handled deployment, integrations, production support, and ongoing maintenance.</li>
                             </ul>
                         </div>
                         <div className="exp-block exp-holiday-suites">
@@ -103,14 +106,14 @@ const AboutMe: FC = () => (
                                 Web Developer | 2016 - 2018
                             </div>
                             <div className="exp-description">
-                                Created many internal tools for managing payments, redeemable codes, accommodations,
-                                events, inventory and bookings. Integrated payment providers as part of an existing
-                                e-commerce site. Built product pages using dynamic pages replacing existing static ones.
+                                Built internal tools for payments, voucher codes, accommodations, events, inventory, and
+                                booking workflows. Integrated payment providers as part of an existing e-commerce site
+                                and replaced static product pages with dynamic pages connected to the existing system.
                             </div>
                         </div>
                     </div>
-                    <h3 id="about-me">Education</h3>
-                    <div className="education-segment" aria-labelledby="about-me">
+                    <h3 id="education">Education</h3>
+                    <div className="education-segment" aria-labelledby="education">
                         <EduBlock
                             title={"MSc in Computer Science"}
                             location={"Ghent University | 2020 - 2023"}

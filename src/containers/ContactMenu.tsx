@@ -27,12 +27,12 @@ const ContactMenu: FC = () => (
             icon={faEnvelope}
         />
         <ContactFeature
-            label="aelbrecht@linkedin"
+            label="LinkedIn /aelbrecht"
             href="https://www.linkedin.com/in/aelbrecht"
             icon={faLinkedin}
         />
         <ContactFeature
-            label="aelbrecht@github"
+            label="GitHub /aelbrecht"
             href="https://github.com/aelbrecht"
             icon={faGithub}
         />

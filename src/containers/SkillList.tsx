@@ -34,37 +34,37 @@ const SkillList: FC = () => (
 
                 <SkillSection
                     title="Core engineering"
-                    subtitle="Production languages and the work they support."
+                    subtitle="Languages I use in day-to-day work."
                 >
                     <ul className="skill-list">
                         <SkillItem
                             title="C++"
-                            description="Core functionality, algorithms, and feature development in existing production systems."
+                            description="PDF processing, algorithms, and feature work in existing applications."
                         />
                         <SkillItem
                             title="Go"
-                            description="Internal tooling, testing platforms, data processing, and backend services."
+                            description="Internal tools, test reporting, data processing, and backend services."
                         />
                         <SkillItem
                             title="TypeScript / React"
-                            description="Frontend architecture, modernization, and web applications."
+                            description="Frontend modernization, product interfaces, and web applications."
                         />
                     </ul>
                 </SkillSection>
 
                 <SkillSection
                     title="Frontend architecture"
-                    subtitle="Modern web systems that stay maintainable under real product pressure."
+                    subtitle="React and TypeScript in existing products."
                 >
                     <p className="skill-note skill-note-block">
-                        Designing and modernizing frontend systems with React and TypeScript, with attention to
-                        maintainability, state management, rendering behavior, and integration with backend services.
+                        Working on frontend code that has to fit real product constraints: state management, rendering
+                        behavior, backend integration, and code that other people can keep changing.
                     </p>
                 </SkillSection>
 
                 <SkillSection
                     title="Tooling and workflow"
-                    subtitle="Tools used across delivery, builds, debugging, and production ownership."
+                    subtitle="Tools used across builds, debugging, delivery, and support."
                 >
                     <ul className="skill-tags">
                         <li>Jenkins</li>
@@ -85,7 +85,7 @@ const SkillList: FC = () => (
                         <li>Simple, explicit solutions over clever abstractions.</li>
                         <li>Maintainability and long-term readability.</li>
                         <li>Systems designed for other engineers, not just machines.</li>
-                        <li>Willingness to challenge poor design decisions when necessary.</li>
+                        <li>Clear technical trade-offs over accidental complexity.</li>
                     </ul>
                 </SkillSection>
             </div>
