@@ -7,7 +7,7 @@ import Link from "./Link"
 import {Helmet} from "react-helmet"
 import {FC} from "react";
 
-const description = "Software engineer working with C++, Go, React, and TypeScript across desktop, web, internal tooling, and frontend architecture.";
+const description = "Software engineer working with C++, Go, TypeScript, and React on PDF functionality, internal tooling, automated testing, and web applications.";
 const siteUrl = "https://rudolf.aelbrecht.io";
 
 const App: FC = () => (

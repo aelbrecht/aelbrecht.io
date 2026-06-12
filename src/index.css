@@ -442,6 +442,19 @@ a:focus-visible {
 
   margin-bottom: 2rem;
 
+  .language-block {
+    padding-bottom: 1rem;
+  }
+
+  .language-title {
+    font-size: 1.1rem;
+  }
+
+  .language-level {
+    color: #333333;
+    font-size: 0.9rem;
+  }
+
   td, th {
     padding-right: 1.5rem;
     font-weight: normal;

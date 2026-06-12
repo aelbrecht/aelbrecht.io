@@ -35,21 +35,22 @@ const ProjectList: FC = () => (
                     <ProjectCard
                         eyebrow="Production platform"
                         title="Matthys Wines e-commerce"
-                        description="Built and operated a Go and React commerce platform across retail, B2B, admin workflows, integrations, deployment, and long-term support."
+                        description="Built and maintained a Go and React commerce platform for retail, B2B, admin workflows, integrations, deployment, and support."
                         points={[
-                            "Owned frontend, backend, deployment, and operational maintenance over several years.",
-                            "Built workflows around ordering, admin tooling, integrations, and production support.",
+                            "Worked across frontend, backend, deployment, and operational maintenance over several years.",
+                            "Built workflows around ordering, admin tooling, integrations, and structured web data.",
+                            "Moved the SPA toward server-side rendering for maintainability, SEO, and performance.",
                             "Used Go, React, Docker, and Docker Compose across the platform."
                         ]}
-                        tags={["Go", "React", "Docker", "B2B", "E-commerce"]}
+                        tags={["Go", "React", "Docker", "SSR", "B2B"]}
                     />
                     <ProjectCard
                         eyebrow="Internal tooling"
                         title="QA reporting platform"
-                        description="Built an internal Go platform that made automated test output easier to inspect, search, and act on for engineers."
+                        description="Built an internal Go platform for automated testing and reporting workflows."
                         points={[
-                            "Turned automated test results into a clearer reporting workflow.",
-                            "Designed around engineering feedback and build/test visibility.",
+                            "Made automated test results easier to inspect, search, and discuss.",
+                            "Worked around existing engineering and build visibility needs.",
                             "Integrated with existing continuous-build infrastructure."
                         ]}
                         tags={["Go", "Testing", "Jenkins"]}
@@ -57,11 +58,11 @@ const ProjectList: FC = () => (
                     <ProjectCard
                         eyebrow="Modernization"
                         title="React and TypeScript migration"
-                        description="Modernized a large existing frontend with React and TypeScript while preserving product behavior and improving maintainability."
+                        description="Contributed to modernizing a large existing frontend with React and TypeScript."
                         points={[
                             "Worked inside an established production codebase rather than rewriting from scratch.",
-                            "Improved structure through typed components and clearer component boundaries.",
-                            "Focused on maintainable rendering behavior, state, and developer experience."
+                            "Used typed components and clearer component boundaries where they fit the existing system.",
+                            "Focused on maintainable rendering behavior, state, and backend communication."
                         ]}
                         tags={["React", "TypeScript"]}
                     />

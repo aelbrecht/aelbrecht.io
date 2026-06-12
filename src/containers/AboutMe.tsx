@@ -15,13 +15,12 @@ const Portrait = () => (
         </div>
         <div className="profile-description">
             <p>
-                Software engineer working across C++, Go, TypeScript, and React. I care about clear data flow, useful
-                internal tooling, maintainable interfaces, and software that can be operated and extended long after the
-                first version ships.
+                Software engineer working across C++, Go, TypeScript, and React in production systems, including PDF
+                functionality, service integration, internal tooling, automated testing, and web interfaces.
             </p>
             <p>
-                I enjoy the unglamorous parts of software: making systems understandable, keeping feedback loops short,
-                and making tools easier to operate.
+                I like practical engineering work: making existing systems easier to understand, keeping feedback loops
+                short, and building tools that stay useful after the first release.
             </p>
         </div>
     </div>
@@ -43,6 +42,22 @@ const EduBlock: FC<EduBlockInterface> = ({title, location}) => (
     </div>
 )
 
+interface LanguageBlockInterface {
+    language: string
+    level: string
+}
+
+const LanguageBlock: FC<LanguageBlockInterface> = ({language, level}) => (
+    <div className="language-block">
+        <div className="language-title">
+            {language}
+        </div>
+        <div className="language-level">
+            {level}
+        </div>
+    </div>
+)
+
 const AboutMe: FC = () => (
     <section className="page-filler">
         <div className="flex-columns ">
@@ -60,22 +75,23 @@ const AboutMe: FC = () => (
                             </div>
                             <div className="exp-function">
                                 <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
-                                Software Engineer | 2023 - Present
+                                Software Engineer | Sep 2023 - Present
                             </div>
                             <div className="exp-function">
                                 <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
-                                Junior Software Engineer | 2022 - 2023
+                                Junior Software Engineer | Sep 2022 - Sep 2023
                             </div>
                             <div className="exp-description">
-                                Work on C++ functionality in a mature PDF-processing codebase, balancing feature
-                                development with existing architecture and product constraints. Also contribute to
-                                frontend modernization, internal Go tooling, and continuous-build workflows.
+                                Work on C++ components and algorithms for PDF functionality in a mature production
+                                codebase. Also contribute to frontend modernization, backend communication, internal Go
+                                tooling, automated testing, and continuous-build workflows.
                             </div>
                             <ul className="exp-bullets">
-                                <li>Designed and implemented C++ components for PDF-related processing and feature development.</li>
-                                <li>Modernized a large React and TypeScript frontend while preserving product behavior.</li>
-                                <li>Built an internal QA reporting platform in Go for automated testing workflows.</li>
-                                <li>Maintained Jenkins-based build pipelines for continuous builds.</li>
+                                <li>Develop C++ components for core PDF functionality and feature work.</li>
+                                <li>Contribute to a React and TypeScript modernization of a large web-based viewer.</li>
+                                <li>Implement communication with backend services using APIs and WebSockets.</li>
+                                <li>Built an internal Go platform for automated test reporting.</li>
+                                <li>Maintain automated testing workflows with unit tests, Playwright, and Jenkins builds.</li>
                             </ul>
                         </div>
                         <div className="exp-block exp-matthys-wines">
@@ -84,7 +100,7 @@ const AboutMe: FC = () => (
                             </div>
                             <div className="exp-function">
                                 <FontAwesomeIcon className="role-icon" icon={faAngleRight}/>
-                                Independent Software Engineer | 2019 - 2024
+                                Freelance | Feb 2019 - Present
                             </div>
                             <div className="exp-description">
                                 Built and operated a Go and React e-commerce platform serving retail and B2B workflows,
@@ -92,9 +108,11 @@ const AboutMe: FC = () => (
                                 over roughly five years.
                             </div>
                             <ul className="exp-bullets">
-                                <li>Containerized Go services with Docker and Docker Compose.</li>
-                                <li>React frontends for retail, B2B, and internal admin tools.</li>
-                                <li>Handled deployment, integrations, production support, and ongoing maintenance.</li>
+                                <li>Built Go microservices with Docker and Docker Compose.</li>
+                                <li>Developed React frontends for retail, B2B, and internal admin tools.</li>
+                                <li>Integrated third-party services for payments, analytics, and structured web data.</li>
+                                <li>Migrated the SPA to server-side rendering to improve maintainability, SEO, and performance.</li>
+                                <li>Handled deployment, production support, and ongoing maintenance.</li>
                             </ul>
                         </div>
                         <div className="exp-block exp-holiday-suites">
@@ -125,6 +143,17 @@ const AboutMe: FC = () => (
                         <EduBlock
                             title={"Science and Mathematics"}
                             location={"Sint-Franciscus-Xaveriusinstituut | 2010 - 2016"}
+                        />
+                    </div>
+                    <h3 id="languages">Languages</h3>
+                    <div className="language-segment" aria-labelledby="languages">
+                        <LanguageBlock
+                            language={"Dutch"}
+                            level={"Native"}
+                        />
+                        <LanguageBlock
+                            language={"English"}
+                            level={"Professional proficiency"}
                         />
                     </div>
                 </div>

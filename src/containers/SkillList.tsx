@@ -34,42 +34,45 @@ const SkillList: FC = () => (
 
                 <SkillSection
                     title="Core engineering"
-                    subtitle="Languages I use in day-to-day work."
+                    subtitle="Languages and frameworks from current production work."
                 >
                     <ul className="skill-list">
                         <SkillItem
                             title="C++"
-                            description="PDF processing, algorithms, and feature work in existing applications."
+                            description="Since 2023: PDF functionality, algorithms, and feature work in existing applications."
                         />
                         <SkillItem
                             title="Go"
-                            description="Internal tools, test reporting, data processing, and backend services."
+                            description="Since 2019: production services, internal tooling, test reporting, and data processing."
                         />
                         <SkillItem
-                            title="TypeScript / React"
-                            description="Frontend modernization, product interfaces, and web applications."
+                            title="TypeScript, React"
+                            description="Since 2019: frontend architecture, web applications, and product interfaces."
                         />
                     </ul>
                 </SkillSection>
 
                 <SkillSection
-                    title="Frontend architecture"
-                    subtitle="React and TypeScript in existing products."
+                    title="Workflow"
+                    subtitle="Tools used across planning, code review, and delivery."
                 >
-                    <p className="skill-note skill-note-block">
-                        Working on frontend code that has to fit real product constraints: state management, rendering
-                        behavior, backend integration, and code that other people can keep changing.
-                    </p>
+                    <ul className="skill-tags">
+                        <li>Codex</li>
+                        <li>Cursor</li>
+                        <li>Git</li>
+                        <li>Perforce</li>
+                        <li>Jira</li>
+                        <li>Spec-driven AI-assisted development</li>
+                    </ul>
                 </SkillSection>
 
                 <SkillSection
-                    title="Tooling and workflow"
-                    subtitle="Tools used across builds, debugging, delivery, and support."
+                    title="CI/CD"
+                    subtitle="Build, test, and deployment tooling."
                 >
                     <ul className="skill-tags">
                         <li>Jenkins</li>
-                        <li>Git</li>
-                        <li>Perforce</li>
+                        <li>Jenkins Pipelines</li>
                         <li>Docker</li>
                         <li>Docker Compose</li>
                         <li>CMake</li>
@@ -78,14 +81,14 @@ const SkillList: FC = () => (
                 </SkillSection>
 
                 <SkillSection
-                    title="Engineering principles"
-                    subtitle="How I approach problems and codebases."
+                    title="Working style"
+                    subtitle="How I tend to approach codebases."
                 >
                     <ul className="skill-list skill-list-simple">
                         <li>Simple, explicit solutions over clever abstractions.</li>
                         <li>Maintainability and long-term readability.</li>
-                        <li>Systems designed for other engineers, not just machines.</li>
-                        <li>Clear technical trade-offs over accidental complexity.</li>
+                        <li>Small feedback loops through useful tests and tooling.</li>
+                        <li>Clear technical trade-offs when working in existing systems.</li>
                     </ul>
                 </SkillSection>
             </div>

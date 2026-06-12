@@ -23,7 +23,7 @@ const LandingBanner: FC = () => (
                             C++ · Go · TypeScript · React
                         </p>
                         <p className="hero-meta">
-                            Core product code, internal tooling, and maintainable web interfaces.
+                            PDF functionality, internal tooling, automated testing, and web applications.
                         </p>
                         <nav className="lead banner-nav" aria-label="Sections">
                             <MenuItem href="#experience" name="Experience"/>
