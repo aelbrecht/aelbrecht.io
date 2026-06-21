@@ -14,6 +14,7 @@ const App: FC = () => {
     const glitchStateRef = useRef<GlitchState>(new Map())
     const hoveredLinkIdRef = useRef<string | null>(null)
     const linkTargetsRef = useRef<LinkTarget[]>([])
+    const suppressNextClickRef = useRef(false)
     const pointerRef = useRef<PointerState>({
         isInside: false,
         x: 0,
@@ -72,6 +73,18 @@ const App: FC = () => {
             canvas.style.cursor = hoveredLink ? "pointer" : "default"
         }
 
+        const updatePointerAndOpenLink = (event: PointerEvent): void => {
+            updatePointer(event)
+
+            const pointer = pointerRef.current
+            const linkTarget = getLinkTargetAtPoint(linkTargetsRef.current, pointer.x, pointer.y)
+
+            if (linkTarget) {
+                suppressNextClickRef.current = true
+                window.location.href = linkTarget.href
+            }
+        }
+
         const clearPointer = (): void => {
             pointerRef.current = {
                 ...pointerRef.current,
@@ -82,6 +95,12 @@ const App: FC = () => {
         }
 
         const openHoveredLink = (): void => {
+            if (suppressNextClickRef.current) {
+                suppressNextClickRef.current = false
+
+                return
+            }
+
             const pointer = pointerRef.current
             const linkTarget = getLinkTargetAtPoint(linkTargetsRef.current, pointer.x, pointer.y)
 
@@ -100,6 +119,8 @@ const App: FC = () => {
 
         resizeObserver.observe(canvas)
         canvas.addEventListener("pointermove", updatePointer)
+        canvas.addEventListener("pointerdown", updatePointer)
+        canvas.addEventListener("pointerup", updatePointerAndOpenLink)
         canvas.addEventListener("pointerleave", clearPointer)
         canvas.addEventListener("click", openHoveredLink)
         window.addEventListener("blur", clearPointer)
@@ -109,6 +130,8 @@ const App: FC = () => {
             cancelAnimationFrame(animationFrame)
             resizeObserver.disconnect()
             canvas.removeEventListener("pointermove", updatePointer)
+            canvas.removeEventListener("pointerdown", updatePointer)
+            canvas.removeEventListener("pointerup", updatePointerAndOpenLink)
             canvas.removeEventListener("pointerleave", clearPointer)
             canvas.removeEventListener("click", openHoveredLink)
             window.removeEventListener("blur", clearPointer)

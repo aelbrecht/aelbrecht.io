@@ -17,6 +17,8 @@ const textColorThreshold = 0.035
 const textOverwriteThreshold = 0.18
 const textGlitchThreshold = 0.38
 const linkHighlightColor = "#9eeaff"
+const linkHitboxHorizontalPadding = 18
+const linkHitboxVerticalPadding = 18
 
 const getVisualViewportBottomInset = (): number => {
     if (!window.visualViewport) {
@@ -247,10 +249,10 @@ const getLinkTarget = (
     return {
         id,
         href,
-        left,
-        right: left + text.length * metrics.cellWidth,
-        top: y - metrics.cellHeight / 2,
-        bottom: y + metrics.cellHeight / 2,
+        left: left - linkHitboxHorizontalPadding,
+        right: left + text.length * metrics.cellWidth + linkHitboxHorizontalPadding,
+        top: y - metrics.cellHeight / 2 - linkHitboxVerticalPadding,
+        bottom: y + metrics.cellHeight / 2 + linkHitboxVerticalPadding,
     }
 }
 

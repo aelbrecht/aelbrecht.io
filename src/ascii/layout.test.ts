@@ -16,10 +16,10 @@ describe("footer layout", () => {
         expect(layout.isStacked).toBe(false)
     })
 
-    test("reserves room for mobile browser controls", () => {
+    test("uses the visible viewport without adding dead mobile space", () => {
         const layout = getFooterLayout(390, 800, 20, 12)
 
-        expect(layout.y).toBe(694)
+        expect(layout.y).toBe(780)
     })
 
     test("uses larger viewport bottom inset when present", () => {
