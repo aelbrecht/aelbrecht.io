@@ -1,17 +1,13 @@
-import SkillList from "./SkillList"
 import ContactMenu from "./ContactMenu"
-import AboutMe from "./AboutMe"
 import LandingBanner from "./LandingBanner"
-import ProjectList from "./ProjectList"
-import Link from "./Link"
 import {Helmet} from "react-helmet"
 import {FC} from "react";
 
-const description = "Software engineer working with C++, Go, TypeScript, and React on PDF functionality, internal tooling, automated testing, and web applications.";
+const description = "Rudolf Aelbrecht, software engineer working with C++, Go, TypeScript, and React.";
 const siteUrl = "https://rudolf.aelbrecht.io";
 
 const App: FC = () => (
-    <div>
+    <div className="site-shell">
         <Helmet>
             <title>Rudolf Aelbrecht | Software Engineer</title>
             <meta name="description" content={description}/>
@@ -38,18 +34,10 @@ const App: FC = () => (
                 })}
             </script>
         </Helmet>
-        <LandingBanner/>
+        <main className="landing-main">
+            <LandingBanner/>
+        </main>
         <ContactMenu/>
-        <AboutMe/>
-        <ProjectList/>
-        <SkillList/>
-        <div style={{height: "3rem"}}/>
-        <ContactMenu/>
-        <footer>
-            &copy; {(new Date()).getFullYear()} Rudolf Aelbrecht
-            <span style={{padding: "0 0.5rem"}}>|</span>
-            <Link to="https://github.com/aelbrecht/aelbrecht.io">View source</Link>
-        </footer>
     </div>
 )
 export default App

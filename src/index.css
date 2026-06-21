@@ -2,55 +2,24 @@ body {
   margin: 0;
   font-size: 17px;
   background-color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
-.landing-banner {
-  background-image: url("https://static.aelbrecht.io/portfolio/snow-banner.jpg");
-
-  height: 65vh;
-  background-size: auto 100%;
-  background-position: 30% center;
-  background-repeat: no-repeat;
+body, #root {
+  min-height: 100vh;
 }
 
-@media screen and (max-width: 660px) {
-  .landing-banner {
-    background-image: none;
-  }
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.mb-0 {
-  margin-bottom: 0;
-}
-
-.text-lead {
-  font-size: 0.9rem;
-  color: #333;
-}
-
-h2 {
-  font-weight: 200;
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-}
-
-@media screen and (max-width: 1000px) {
-  h2 {
-    margin-top: 0;
-  }
-}
-
-h3:not(.work-title) {
-  font-weight: 600;
-  font-size: 1.35rem;
-  text-transform: lowercase;
-  font-variant: small-caps;
+.landing-main {
+  flex: 1;
+  display: flex;
 }
 
 .flex-columns {
@@ -60,23 +29,6 @@ h3:not(.work-title) {
   justify-content: center;
 }
 
-.flex-inner-column {
-  width: 40%;
-  max-width: 600px;
-  display: flex;
-  justify-content: center;
-}
-
-.flex-inner-column-70 {
-  width: 70%;
-  max-width: 520px;
-}
-
-.flex-inner-column-30 {
-  width: 30%;
-  max-width: 520px;
-}
-
 .flex-full-column {
   width: 80%;
   max-width: 1200px;
@@ -84,63 +36,18 @@ h3:not(.work-title) {
   justify-content: center;
 }
 
-.flex-full-column-70 {
-  max-width: 1090px;
-}
-
 @media screen and (max-width: 1000px) {
-  .flex-full-column-70 {
-    max-width: 520px;
-  }
-}
-
-.w320px {
-  width: 280px;
-}
-
-.w100 {
-  width: 100%;
-}
-
-.p2 {
-  padding: 2rem 2rem 0 2rem;
-}
-
-.flex-column {
-  width: 50%;
-}
-
-
-@media screen and (max-width: 1280px) {
-  .flex-column {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .flex-inner-column {
-    width: 100%;
-  }
-
   .flex-full-column {
     width: 100%;
   }
-
-  .flex-inner-column.hide-mobile {
-    display: none;
-  }
 }
 
-
-.flex-outer-column {
-  flex-grow: 1;
-  min-height: 50vh;
-}
-
-@media screen and (max-width: 1000px) {
-  .flex-outer-column {
-    display: none;
-  }
+.landing-banner {
+  background-image: url("https://static.aelbrecht.io/portfolio/snow-banner.jpg");
+  min-height: 65vh;
+  background-size: auto 100%;
+  background-position: 30% center;
+  background-repeat: no-repeat;
 }
 
 .element-name {
@@ -218,46 +125,16 @@ h3:not(.work-title) {
   max-width: 430px;
 }
 
-.hero-meta {
-  color: #333;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  margin: 0 0 0.8rem;
-  max-width: 440px;
-}
-
-.banner-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.25rem;
-  line-height: 1.4;
-  margin-top: 1.1rem;
-}
-
-.page-padding {
-  padding: 20px;
-}
-
 .page-filler {
-  min-height: 90vh;
   width: 100%;
   display: flex;
+  flex: 1;
 }
 
 @media screen and (max-width: 660px) {
   .page-filler {
-    min-height: 100vh;
+    align-items: center;
   }
-}
-
-.page-filler-70 {
-  min-height: 90vh;
-}
-
-.banner-link {
-  font-weight: 600;
-  text-decoration: none;
-  color: #083452;
 }
 
 .page-filler .flex-columns {
@@ -303,450 +180,4 @@ a:focus-visible {
   .contact .hide-mobile {
     font-size: 0;
   }
-}
-
-.portrait {
-  max-width: 340px;
-
-  img {
-    width: 100%;
-    max-width: 340px;
-  }
-
-  .portrait-description {
-    padding: 0.8rem 0;
-
-    .portrait-name {
-      font-size: 1.2rem;
-      font-weight: 400;
-      text-align: right;
-    }
-
-  }
-
-  .profile-description {
-    p {
-      line-height: 1.55;
-      text-align: left;
-    }
-  }
-}
-
-.education-segment {
-  margin-bottom: 2rem;
-  padding: 1.8rem 0 0.6rem 2.25rem;
-  background-image: url("./images/education-frame.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.education-segment .edu-block {
-  padding-bottom: 1rem;
-}
-
-.education-segment .edu-title {
-  font-size: 1.1rem;
-}
-
-.education-segment .edu-location {
-  font-size: 0.8rem;
-}
-
-.portrait-mobile {
-  display: none;
-}
-
-.portrait-desktop {
-  display: flex;
-}
-
-@media screen and (max-width: 1000px) {
-  .portrait-mobile {
-    display: flex;
-  }
-
-  .portrait-desktop {
-    display: none;
-  }
-}
-
-.experience-segment {
-
-  margin-bottom: 2rem;
-
-  .exp-block {
-    background-size: 40px 40px;
-    background-repeat: no-repeat;
-    padding-left: 50px;
-    margin-bottom: 1rem;
-  }
-
-  .exp-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-
-  .exp-function {
-    margin-top: 0.2rem;
-    font-size: 1rem;
-  }
-
-  .exp-description {
-    margin-top: 0.45rem;
-    text-align: left;
-    max-width: 520px;
-    font-size: 0.95rem;
-    line-height: 1.45;
-    padding-left: 0.8rem;
-    color: #333333;
-  }
-
-  .exp-bullets {
-    color: #333333;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0.5rem 0 0 0;
-    max-width: 520px;
-    padding-left: 1.9rem;
-  }
-
-  .exp-bullets li {
-    margin-bottom: 0.25rem;
-  }
-
-  .exp-matthys-wines {
-    background-image: url("https://static.aelbrecht.io/portfolio/matthys-wines.png");
-  }
-
-  .exp-holiday-suites {
-    background-image: url("https://static.aelbrecht.io/portfolio/holiday-suites.jpg");
-  }
-
-  .exp-esko {
-    background-image: url("https://static.aelbrecht.io/portfolio/esko-2.jpg");
-  }
-
-  .exp-st {
-    background-image: url("https://static.aelbrecht.io/portfolio/st-engineering-v2.jpg");
-  }
-
-  .role-icon {
-    font-size: 10px;
-    vertical-align: 0;
-    margin-right: 0.2rem;
-    margin-left: 0.2rem;
-  }
-}
-
-.language-segment {
-
-  margin-bottom: 2rem;
-
-  .language-block {
-    padding-bottom: 1rem;
-  }
-
-  .language-title {
-    font-size: 1.1rem;
-  }
-
-  .language-level {
-    color: #333333;
-    font-size: 0.9rem;
-  }
-
-  td, th {
-    padding-right: 1.5rem;
-    font-weight: normal;
-  }
-
-  .lang-stat {
-    font-variant: small-caps;
-    font-size: 1.1rem;
-    padding-bottom: 2px;
-    color: #3d3d3d;
-    font-weight: 600;
-  }
-
-  .lang-stat.lang-good {
-    color: #079992;
-  }
-
-  .lang-stat.lang-bad {
-    color: #e58e26;
-  }
-
-}
-
-.skill-section {
-  margin-bottom: 2rem;
-}
-
-.skill-section h3 {
-  margin-bottom: 0.25rem;
-}
-
-.skill-section .text-lead {
-  margin-bottom: 0.75rem;
-}
-
-.skill-list {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin: 0 0 0.5rem 0;
-}
-
-.skill-list-simple {
-  list-style: disc;
-}
-
-.skill-item {
-  margin-bottom: 0.75rem;
-}
-
-.skill-item-title {
-  display: block;
-  font-weight: 600;
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
-}
-
-.skill-item-desc {
-  display: block;
-  font-size: 0.9rem;
-  color: #333;
-  line-height: 1.4;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding-left: 0;
-  margin: 0 0 0.5rem 0;
-  gap: 0.5rem;
-}
-
-.skill-tags li {
-  background-color: #f3f3f3;
-  padding: 0.35rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.skill-tags .skill-star {
-  font-size: 0.8rem;
-  color: #f6b93b;
-}
-
-.skill-note {
-  font-size: 0.9rem;
-  color: #333;
-  margin: 0.5rem 0 0 0;
-  font-style: italic;
-}
-
-.skill-note-block {
-  max-width: 720px;
-  line-height: 1.45;
-}
-
-.project-grid {
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.project-card {
-  border-left: 3px solid #0c2461;
-  padding: 0.2rem 0 0.3rem 1rem;
-}
-
-.project-eyebrow {
-  color: #596275;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.project-card .project-title {
-  font-size: 1.2rem;
-  font-variant: normal;
-  margin: 0.25rem 0 0.4rem;
-  text-transform: none;
-}
-
-.project-description {
-  color: #333;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  margin: 0;
-}
-
-.project-points {
-  color: #333;
-  font-size: 0.92rem;
-  line-height: 1.4;
-  margin: 0.65rem 0;
-  padding-left: 1.2rem;
-}
-
-.project-points li {
-  margin-bottom: 0.25rem;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.project-tags li {
-  background-color: #f3f3f3;
-  border-radius: 2px;
-  color: #303952;
-  font-size: 0.82rem;
-  padding: 0.25rem 0.45rem;
-}
-
-.work-story-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  @media screen and (max-width: 1000px) {
-    flex-wrap: wrap;
-  }
-
-  .story-body, .story-image {
-    flex-grow: 1;
-    min-width: calc(50% - 10px);
-    margin: 10px;
-  }
-
-  .story-padding {
-    padding: 0.75rem 1.75rem;
-
-    @media screen and (max-width: 1000px) {
-      padding: 0;
-    }
-  }
-
-  .story-body {
-    margin-bottom: 1rem;
-
-    .story-padding {
-      border-radius: 20px;
-      padding-bottom: 1rem;
-      background-color: #f8f8f8;
-      @media screen and (max-width: 1000px) {
-        background-color: transparent;
-      }
-    }
-  }
-
-  .story-link {
-    margin-bottom: 1rem;
-  }
-
-  .work-title {
-    font-weight: normal;
-    font-size: 1.4rem;
-  }
-
-  .story-text {
-    margin-top: 0.2em;
-    text-align: justify;
-  }
-
-  .work-icon-mw, .work-icon-hs {
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-  }
-
-  .work-icon-mw {
-    background-image: url("https://static.aelbrecht.io/portfolio/matthys-wines.png");
-  }
-
-  .work-icon-hs {
-    background-image: url("./images/holiday-suites.svg");
-  }
-
-  .story-image-display:not(img) {
-    min-height: 420px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin: 0.5rem;
-  }
-
-  .story-image {
-    align-self: center;
-
-    p {
-      margin-top: 0;
-      width: 100%;
-      text-align: center;
-    }
-
-    img {
-      width: 100%;
-    }
-  }
-
-  p {
-    text-align: justify;
-  }
-
-  h4 {
-    font-variant: small-caps;
-    text-transform: lowercase;
-    font-size: 1.2rem;
-  }
-}
-
-.work-showcase {
-  max-width: 800px;
-  margin: auto;
-  margin-top: 2rem;
-
-  .carousel .slide {
-    background: white;
-  }
-}
-
-.mt-0 {
-  margin-top: 0;
-}
-
-.mb-1 {
-  margin-bottom: 0.5rem;
-}
-
-.yt-video {
-  width: 100%;
-  height: 271px;
-}
-
-h5 {
-  padding: 0;
-  font-size: 1rem;
-  margin: 0 0 0.5rem 0;
-  display: inline-block;
-}
-
-.mb-0 {
-  margin-bottom: 0;
-}
-
-footer {
-  padding: 0 0.5rem 1rem 0.5rem;
-  color: #3d3d3d;
-  text-align: center;
 }
