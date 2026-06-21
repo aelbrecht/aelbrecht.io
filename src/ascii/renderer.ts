@@ -257,6 +257,9 @@ const drawMergedFooter = (
     hoveredLinkId: string | null,
 ): LinkTarget[] => {
     const {left, right} = getFooterBounds(canvasWidth)
+    const getLabel = ({label, compactLabel}: typeof footerLinks[number]): string => (
+        footerLayout.isCompact ? compactLabel : label
+    )
     const linkTargets: LinkTarget[] = []
 
     context.save()
@@ -264,7 +267,9 @@ const drawMergedFooter = (
     context.textBaseline = "middle"
 
     if (footerLayout.isStacked) {
-        footerLinks.forEach(({id, label, href}, index) => {
+        footerLinks.forEach((link, index) => {
+            const {id, href} = link
+            const label = getLabel(link)
             const y = footerLayout.topY + index * metrics.cellHeight
 
             linkTargets.push(getLinkTarget(id, href, label, canvasWidth / 2, y, "center", metrics))
@@ -287,13 +292,17 @@ const drawMergedFooter = (
         return linkTargets
     }
 
-    linkTargets.push(getLinkTarget(footerLinks[0].id, footerLinks[0].href, footerLinks[0].label, left, footerLayout.y, "left", metrics))
-    linkTargets.push(getLinkTarget(footerLinks[1].id, footerLinks[1].href, footerLinks[1].label, canvasWidth / 2, footerLayout.y, "center", metrics))
-    linkTargets.push(getLinkTarget(footerLinks[2].id, footerLinks[2].href, footerLinks[2].label, right, footerLayout.y, "right", metrics))
+    const leftLabel = getLabel(footerLinks[0])
+    const centerLabel = getLabel(footerLinks[1])
+    const rightLabel = getLabel(footerLinks[2])
 
-    drawMergedTextLine(context, fluidField, metrics, glitchState, elapsedSeconds, footerLinks[0].label, left, footerLayout.y, "left", "footer-left", hoveredLinkId === footerLinks[0].id)
-    drawMergedTextLine(context, fluidField, metrics, glitchState, elapsedSeconds, footerLinks[1].label, canvasWidth / 2, footerLayout.y, "center", "footer-center", hoveredLinkId === footerLinks[1].id)
-    drawMergedTextLine(context, fluidField, metrics, glitchState, elapsedSeconds, footerLinks[2].label, right, footerLayout.y, "right", "footer-right", hoveredLinkId === footerLinks[2].id)
+    linkTargets.push(getLinkTarget(footerLinks[0].id, footerLinks[0].href, leftLabel, left, footerLayout.y, "left", metrics))
+    linkTargets.push(getLinkTarget(footerLinks[1].id, footerLinks[1].href, centerLabel, canvasWidth / 2, footerLayout.y, "center", metrics))
+    linkTargets.push(getLinkTarget(footerLinks[2].id, footerLinks[2].href, rightLabel, right, footerLayout.y, "right", metrics))
+
+    drawMergedTextLine(context, fluidField, metrics, glitchState, elapsedSeconds, leftLabel, left, footerLayout.y, "left", "footer-left", hoveredLinkId === footerLinks[0].id)
+    drawMergedTextLine(context, fluidField, metrics, glitchState, elapsedSeconds, centerLabel, canvasWidth / 2, footerLayout.y, "center", "footer-center", hoveredLinkId === footerLinks[1].id)
+    drawMergedTextLine(context, fluidField, metrics, glitchState, elapsedSeconds, rightLabel, right, footerLayout.y, "right", "footer-right", hoveredLinkId === footerLinks[2].id)
     context.restore()
 
     return linkTargets
@@ -332,7 +341,7 @@ export const drawAsciiLanding = (
     context.textBaseline = "middle"
 
     const metrics = getGridMetrics(context, rect.width, rect.height, fontSize)
-    const footerLayout = getFooterLayout(context, rect.width, rect.height, metrics.cellHeight)
+    const footerLayout = getFooterLayout(rect.width, rect.height, metrics.cellHeight, metrics.cellWidth)
     const nextFluidField = getOrCreateFluidField(fluidField, rect.width, rect.height, metrics.cellWidth, metrics.cellHeight)
 
     if (pointer.isInside) {

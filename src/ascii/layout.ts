@@ -1,4 +1,5 @@
 import {
+    compactFooterLabels,
     footerLabels,
     footerMaxWidth,
     lineGap,
@@ -29,15 +30,19 @@ const getMaxTextWidth = (context: CanvasRenderingContext2D, labels: string[]): n
     Math.max(...labels.map(label => context.measureText(label).width))
 )
 
+const getGridTextWidth = (context: CanvasRenderingContext2D, text: string): number => (
+    text.length * (Math.ceil(context.measureText("M").width) + lineGap)
+)
+
 export const getResponsiveFontSize = (context: CanvasRenderingContext2D, canvasWidth: number): number => {
     const margin = getCanvasMargin(canvasWidth)
     const availableWidth = canvasWidth - margin * 2
-    const labels = [...profileLines, ...footerLabels]
+    const labels = [...profileLines, ...compactFooterLabels]
 
     for (let fontSize = maxFontSize; fontSize >= minFontSize; fontSize -= 1) {
         setCanvasFont(context, fontSize)
 
-        if (getMaxTextWidth(context, labels) <= availableWidth) {
+        if (Math.max(getMaxTextWidth(context, labels), ...labels.map(label => getGridTextWidth(context, label))) <= availableWidth) {
             return fontSize
         }
     }
@@ -58,22 +63,33 @@ export const getGridMetrics = (
 })
 
 export const getFooterLayout = (
-    context: CanvasRenderingContext2D,
     canvasWidth: number,
     canvasHeight: number,
     cellHeight: number,
+    cellWidth: number,
 ): FooterLayout => {
     const margin = getCanvasMargin(canvasWidth)
     const footerGap = canvasWidth < 700 ? 0 : 44
-    const totalFooterWidth = footerLabels.reduce(
-        (total, label) => total + context.measureText(label).width,
-        footerGap * (footerLabels.length - 1),
-    )
-    const isStacked = totalFooterWidth > canvasWidth - margin * 2
+    const availableWidth = canvasWidth - margin * 2
+    const footerWidth = Math.min(availableWidth, footerMaxWidth)
+    const fitsFooter = ([leftWidth, centerWidth, rightWidth]: number[]): boolean => {
+        const center = footerWidth / 2
+        const leftEnd = leftWidth
+        const centerStart = center - centerWidth / 2
+        const centerEnd = center + centerWidth / 2
+        const rightStart = footerWidth - rightWidth
+
+        return leftEnd + footerGap <= centerStart && centerEnd + footerGap <= rightStart
+    }
+    const footerWidths = footerLabels.map(label => label.length * cellWidth)
+    const compactFooterWidths = compactFooterLabels.map(label => label.length * cellWidth)
+    const isCompact = !fitsFooter(footerWidths)
+    const isStacked = !fitsFooter(compactFooterWidths)
     const bottomY = canvasHeight - Math.max(20, margin)
-    const topY = isStacked ? bottomY - (footerLabels.length - 1) * cellHeight : bottomY
+    const topY = isStacked ? bottomY - (compactFooterLabels.length - 1) * cellHeight : bottomY
 
     return {
+        isCompact,
         isStacked,
         topY,
         y: bottomY,

@@ -11,6 +11,7 @@ export type GridPoint = {
 }
 
 export type FooterLayout = {
+    isCompact: boolean
     isStacked: boolean
     topY: number
     y: number

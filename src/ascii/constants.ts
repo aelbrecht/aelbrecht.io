@@ -13,17 +13,21 @@ export const footerLinks = [
     {
         id: "mail",
         label: "[ mail ] rudolf@aelbrecht.io",
+        compactLabel: "[ mail ]",
         href: "mailto:rudolf@aelbrecht.io",
     },
     {
         id: "linkedin",
         label: "[ in ] LinkedIn /aelbrecht",
+        compactLabel: "[ in ]",
         href: "https://www.linkedin.com/in/aelbrecht",
     },
     {
         id: "github",
         label: "[ git ] GitHub /aelbrecht",
+        compactLabel: "[ git ]",
         href: "https://github.com/aelbrecht",
     },
 ]
 export const footerLabels = footerLinks.map(({label}) => label)
+export const compactFooterLabels = footerLinks.map(({compactLabel}) => compactLabel)
