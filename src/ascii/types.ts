@@ -43,6 +43,20 @@ export type GlitchCell = {
 
 export type GlitchState = Map<string, GlitchCell>
 
+export type LinkTarget = {
+    id: string
+    href: string
+    left: number
+    right: number
+    top: number
+    bottom: number
+}
+
+export type RenderResult = {
+    fluidField: FluidField | null
+    linkTargets: LinkTarget[]
+}
+
 export type PointerState = {
     isInside: boolean
     x: number

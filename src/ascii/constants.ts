@@ -8,9 +8,22 @@ export const backgroundColor = "#000000"
 export const foregroundColor = "#ffffff"
 export const flowRamp = " .,:;+*xX#@"
 export const glitchRamp = "!<>[]{}\\/|?%$#@&*+=~"
-export const profileLines = ["Rudolf Aelbrecht", "Software Engineer", "C++  Go  TypeScript  React"]
-export const footerLabels = [
-    "[ mail ] rudolf@aelbrecht.io",
-    "[ in ] LinkedIn /aelbrecht",
-    "[ git ] GitHub /aelbrecht",
+export const profileLines = ["Rudolf Aelbrecht", "Software Engineer", "C++  Go  TS  Python"]
+export const footerLinks = [
+    {
+        id: "mail",
+        label: "[ mail ] rudolf@aelbrecht.io",
+        href: "mailto:rudolf@aelbrecht.io",
+    },
+    {
+        id: "linkedin",
+        label: "[ in ] LinkedIn /aelbrecht",
+        href: "https://www.linkedin.com/in/aelbrecht",
+    },
+    {
+        id: "github",
+        label: "[ git ] GitHub /aelbrecht",
+        href: "https://github.com/aelbrecht",
+    },
 ]
+export const footerLabels = footerLinks.map(({label}) => label)
