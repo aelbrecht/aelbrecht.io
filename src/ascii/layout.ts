@@ -10,6 +10,8 @@ import {
 } from "./constants"
 import {FooterLayout, GridMetrics, GridPoint} from "./types"
 
+const mobileFooterBottomReserve = 86
+
 export const getGridPosition = (
     {cellWidth, cellHeight, centerX, centerY}: GridMetrics,
     {column, row}: GridPoint,
@@ -67,6 +69,7 @@ export const getFooterLayout = (
     canvasHeight: number,
     cellHeight: number,
     cellWidth: number,
+    bottomInset = 0,
 ): FooterLayout => {
     const margin = getCanvasMargin(canvasWidth)
     const footerGap = canvasWidth < 700 ? 0 : 44
@@ -85,7 +88,8 @@ export const getFooterLayout = (
     const compactFooterWidths = compactFooterLabels.map(label => label.length * cellWidth)
     const isCompact = !fitsFooter(footerWidths)
     const isStacked = !fitsFooter(compactFooterWidths)
-    const bottomY = canvasHeight - Math.max(20, margin)
+    const mobileReserve = canvasWidth < 700 ? mobileFooterBottomReserve : 0
+    const bottomY = canvasHeight - Math.max(20, margin) - Math.max(bottomInset, mobileReserve)
     const topY = isStacked ? bottomY - (compactFooterLabels.length - 1) * cellHeight : bottomY
 
     return {

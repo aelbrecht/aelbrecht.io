@@ -18,6 +18,14 @@ const textOverwriteThreshold = 0.18
 const textGlitchThreshold = 0.38
 const linkHighlightColor = "#9eeaff"
 
+const getVisualViewportBottomInset = (): number => {
+    if (!window.visualViewport) {
+        return 0
+    }
+
+    return Math.max(0, window.innerHeight - window.visualViewport.height - window.visualViewport.offsetTop)
+}
+
 export const resizeCanvas = (canvas: HTMLCanvasElement): void => {
     const rect = canvas.getBoundingClientRect()
     const devicePixelRatio = Math.max(window.devicePixelRatio || minDevicePixelRatio, minDevicePixelRatio)
@@ -341,7 +349,13 @@ export const drawAsciiLanding = (
     context.textBaseline = "middle"
 
     const metrics = getGridMetrics(context, rect.width, rect.height, fontSize)
-    const footerLayout = getFooterLayout(rect.width, rect.height, metrics.cellHeight, metrics.cellWidth)
+    const footerLayout = getFooterLayout(
+        rect.width,
+        rect.height,
+        metrics.cellHeight,
+        metrics.cellWidth,
+        getVisualViewportBottomInset(),
+    )
     const nextFluidField = getOrCreateFluidField(fluidField, rect.width, rect.height, metrics.cellWidth, metrics.cellHeight)
 
     if (pointer.isInside) {
