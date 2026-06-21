@@ -1,183 +1,26 @@
 body {
   margin: 0;
-  font-size: 17px;
-  background-color: white;
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body, #root {
+html,
+body,
+#root {
+  width: 100%;
   min-height: 100vh;
 }
 
-.site-shell {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+body {
+  overflow: hidden;
 }
 
-.landing-main {
-  flex: 1;
-  display: flex;
-}
-
-.flex-columns {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.flex-full-column {
-  width: 80%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: center;
-}
-
-@media screen and (max-width: 1000px) {
-  .flex-full-column {
-    width: 100%;
-  }
-}
-
-.landing-banner {
-  background-image: url("https://static.aelbrecht.io/portfolio/snow-banner.jpg");
-  min-height: 65vh;
-  background-size: auto 100%;
-  background-position: 30% center;
-  background-repeat: no-repeat;
-}
-
-.element-name {
-  box-sizing: border-box;
-  padding-left: 50%;
-  background-image: url("./images/name-frame.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  align-self: center;
-  color: black;
-  display: flex;
-  justify-content: left;
-  text-align: left;
-}
-
-@media screen and (max-width: 740px) {
-  .element-name {
-    padding-left: 40%;
-    background-position: 40%;
-  }
-}
-
-@media screen and (max-width: 660px) {
-  .element-name {
-    background-image: none;
-    padding-left: 0;
-    justify-content: center;
-  }
-}
-
-.flex-center {
-  align-self: center;
-}
-
-.element-name .flex-center {
-  padding: 4.6rem 2rem 2rem;
-  max-width: 430px;
-}
-
-@media screen and (max-width: 660px) {
-  .element-name .flex-center {
-    max-width: 430px;
-    padding-top: 2rem;
-  }
-
-}
-
-.element-name .name {
-  margin: 0;
-  padding-bottom: 0.3rem;
-  font-size: 2.7rem;
-  font-weight: 400;
-  line-height: 1.05;
-}
-
-.element-name .lead {
-  font-size: 1rem;
-}
-
-.hero-role {
-  color: #0c2461;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.45rem;
-}
-
-.hero-pitch {
-  color: #1e272e;
-  font-size: 1.05rem;
-  line-height: 1.45;
-  margin: 0 0 0.45rem;
-  max-width: 430px;
-}
-
-.page-filler {
-  width: 100%;
-  display: flex;
-  flex: 1;
-}
-
-@media screen and (max-width: 660px) {
-  .page-filler {
-    align-items: center;
-  }
-}
-
-.page-filler .flex-columns {
-  align-self: center;
-}
-
-.contact {
-  max-width: 1800px;
-  margin: auto auto 5vh;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.contact .contact-feature a {
-  color: #083452;
-  padding: 0.5rem 1rem;
-  white-space: nowrap;
+.site-canvas {
   display: block;
-}
-
-
-a {
-  color: #083452 !important;
-}
-
-a:focus-visible {
-  border-radius: 2px;
-  outline: 3px solid #f6b93b;
-  outline-offset: 3px;
-}
-
-.contact .contact-feature .hide-mobile {
-  padding-left: 0.5rem;
-}
-
-@media screen and (max-width: 780px) {
-
-  .contact .contact-feature {
-    text-align: center;
-  }
-
-  .contact .hide-mobile {
-    font-size: 0;
-  }
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  cursor: default;
+  touch-action: none;
 }
