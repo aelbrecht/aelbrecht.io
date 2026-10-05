@@ -1,9 +1,12 @@
-import {backgroundColor, flowRamp, minDevicePixelRatio} from "./constants"
+import {backgroundColor, emailText, flowRamp, foregroundColor, glitchRamp, minDevicePixelRatio} from "./constants"
 import {addPointerFluid, getFluidIndex, getOrCreateFluidField, stepFluid} from "./fluid"
 import {getGridMetrics, getResponsiveFontSize, setCanvasFont} from "./layout"
-import {FluidField, GridMetrics, PointerState} from "./types"
+import {FluidField, GlitchState, GridMetrics, PointerState} from "./types"
 
 const fluidVisibilityThreshold = 0.012
+const textColorThreshold = 0.035
+const textOverwriteThreshold = 0.18
+const textGlitchThreshold = 0.38
 
 export const resizeCanvas = (canvas: HTMLCanvasElement): void => {
     const rect = canvas.getBoundingClientRect()
@@ -17,10 +20,14 @@ export const resizeCanvas = (canvas: HTMLCanvasElement): void => {
     }
 }
 
-const getFluidStyle = (density: number, speed: number): string => {
+const clamp = (value: number, min: number, max: number): number => (
+    Math.max(min, Math.min(max, value))
+)
+
+const getFluidStyle = (density: number, speed: number, textBoost = 1): string => {
     const hue = 182 + Math.min(100, speed * 58 + density * 28)
-    const saturation = Math.min(100, 78 + density * 75)
-    const lightness = Math.min(84, 48 + density * 82 + speed * 10)
+    const saturation = Math.min(100, 78 + density * 75 * textBoost)
+    const lightness = Math.min(84, 48 + density * 82 * textBoost + speed * 10)
 
     return `hsl(${hue}, ${saturation}%, ${lightness}%)`
 }
@@ -32,6 +39,33 @@ const getFlowCharacter = (density: number, speed: number): string => {
     )
 
     return flowRamp[rampIndex]
+}
+
+const getGlitchCharacter = (column: number, row: number, elapsedSeconds: number): string => {
+    const value = Math.abs(Math.sin(column * 91.7 + row * 57.3 + elapsedSeconds * 17.9))
+    const index = Math.min(glitchRamp.length - 1, Math.floor(value * glitchRamp.length))
+
+    return glitchRamp[index]
+}
+
+const getFluidSampleAtPosition = (
+    fluidField: FluidField,
+    metrics: GridMetrics,
+    x: number,
+    y: number,
+): {column: number, row: number, density: number, speed: number} => {
+    const centerColumn = (fluidField.columns - 1) / 2
+    const centerRow = (fluidField.rows - 1) / 2
+    const column = clamp(Math.round((x - metrics.centerX) / metrics.cellWidth + centerColumn), 0, fluidField.columns - 1)
+    const row = clamp(Math.round((y - metrics.centerY) / metrics.cellHeight + centerRow), 0, fluidField.rows - 1)
+    const index = getFluidIndex(fluidField.columns, column, row)
+
+    return {
+        column,
+        row,
+        density: fluidField.density[index],
+        speed: Math.hypot(fluidField.velocityX[index], fluidField.velocityY[index]),
+    }
 }
 
 const drawFluidField = (
@@ -70,9 +104,80 @@ const drawFluidField = (
     context.restore()
 }
 
+const drawMergedGlyph = (
+    context: CanvasRenderingContext2D,
+    fluidField: FluidField,
+    metrics: GridMetrics,
+    glitchState: GlitchState,
+    elapsedSeconds: number,
+    key: string,
+    character: string,
+    x: number,
+    y: number,
+): void => {
+    const sample = getFluidSampleAtPosition(fluidField, metrics, x, y)
+    const existingGlitch = glitchState.get(key)
+    const hasActiveGlitch = existingGlitch !== undefined && existingGlitch.expiresAt > elapsedSeconds
+    const shouldStartGlitch = sample.density >= textGlitchThreshold
+        && (!hasActiveGlitch || Math.random() < 0.035 + sample.density * 0.08)
+
+    if (shouldStartGlitch) {
+        glitchState.set(key, {
+            character: getGlitchCharacter(sample.column, sample.row, elapsedSeconds),
+            expiresAt: elapsedSeconds + 0.1 + Math.random() * 0.36,
+        })
+    } else if (existingGlitch && existingGlitch.expiresAt <= elapsedSeconds && sample.density < textColorThreshold) {
+        glitchState.delete(key)
+    }
+
+    const activeGlitch = glitchState.get(key)
+    const nextCharacter = activeGlitch && activeGlitch.expiresAt > elapsedSeconds
+        ? activeGlitch.character
+        : sample.density >= textOverwriteThreshold
+            ? getFlowCharacter(sample.density, sample.speed)
+            : character
+
+    context.globalAlpha = 1
+    context.fillStyle = sample.density >= textColorThreshold || activeGlitch
+        ? getFluidStyle(Math.max(sample.density, 0.2), sample.speed, 1.6)
+        : foregroundColor
+    context.fillText(nextCharacter, x, y)
+}
+
+const drawEmail = (
+    context: CanvasRenderingContext2D,
+    fluidField: FluidField,
+    metrics: GridMetrics,
+    glitchState: GlitchState,
+    elapsedSeconds: number,
+): void => {
+    context.save()
+    context.textAlign = "center"
+    context.textBaseline = "middle"
+
+    const firstColumn = -(emailText.length - 1) / 2
+
+    Array.from(emailText).forEach((character, index) => {
+        drawMergedGlyph(
+            context,
+            fluidField,
+            metrics,
+            glitchState,
+            elapsedSeconds,
+            `email:${index}`,
+            character,
+            metrics.centerX + (firstColumn + index) * metrics.cellWidth,
+            metrics.centerY,
+        )
+    })
+
+    context.restore()
+}
+
 export const drawAsciiBackground = (
     canvas: HTMLCanvasElement,
     fluidField: FluidField | null,
+    glitchState: GlitchState,
     pointer: PointerState,
     elapsedSeconds: number,
     deltaSeconds: number,
@@ -110,6 +215,7 @@ export const drawAsciiBackground = (
     })
 
     drawFluidField(context, nextFluidField, metrics)
+    drawEmail(context, nextFluidField, metrics, glitchState, elapsedSeconds)
 
     return nextFluidField
 }

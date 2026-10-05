@@ -1,4 +1,4 @@
-import {lineGap, lineHeightRatio, maxFontSize, minFontSize} from "./constants"
+import {emailText, lineGap, lineHeightRatio, maxFontSize, minFontSize} from "./constants"
 import {GridMetrics} from "./types"
 
 export const getCanvasMargin = (canvasWidth: number): number => (
@@ -12,12 +12,11 @@ export const setCanvasFont = (context: CanvasRenderingContext2D, fontSize: numbe
 export const getResponsiveFontSize = (context: CanvasRenderingContext2D, canvasWidth: number): number => {
     const margin = getCanvasMargin(canvasWidth)
     const availableWidth = canvasWidth - margin * 2
-    const minColumns = 17
 
     for (let fontSize = maxFontSize; fontSize >= minFontSize; fontSize -= 1) {
         setCanvasFont(context, fontSize)
 
-        if (minColumns * (Math.ceil(context.measureText("M").width) + lineGap) <= availableWidth) {
+        if (emailText.length * (Math.ceil(context.measureText("M").width) + lineGap) <= availableWidth) {
             return fontSize
         }
     }

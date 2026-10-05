@@ -26,3 +26,5 @@ export type PointerState = {
     previousX: number
     previousY: number
 }
+
+export type GlitchState = Map<string, {character: string, expiresAt: number}>

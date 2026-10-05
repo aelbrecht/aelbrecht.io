@@ -1,10 +1,12 @@
 import {FC, useEffect, useRef} from "react"
-import {FluidField, PointerState} from "../ascii/types"
+import {FluidField, GlitchState, PointerState} from "../ascii/types"
+import {emailText} from "../ascii/constants"
 import {drawAsciiBackground, resizeCanvas} from "../ascii/renderer"
 
 const App: FC = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null)
     const fluidFieldRef = useRef<FluidField | null>(null)
+    const glitchStateRef = useRef<GlitchState>(new Map())
     const pointerRef = useRef<PointerState>({
         isInside: false,
         x: 0,
@@ -31,6 +33,7 @@ const App: FC = () => {
             fluidFieldRef.current = drawAsciiBackground(
                 canvas,
                 fluidFieldRef.current,
+                glitchStateRef.current,
                 pointerRef.current,
                 timestamp / 1000,
                 deltaSeconds,
@@ -63,6 +66,7 @@ const App: FC = () => {
 
         const resizeObserver = new ResizeObserver(() => {
             fluidFieldRef.current = null
+            glitchStateRef.current.clear()
             resizeCanvas(canvas)
         })
 
@@ -83,7 +87,7 @@ const App: FC = () => {
         }
     }, [])
 
-    return <canvas ref={canvasRef} className="site-canvas" aria-label="ASCII grid"/>
+    return <canvas ref={canvasRef} className="site-canvas" aria-label={emailText}/>
 }
 
 export default App
