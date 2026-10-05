@@ -5,18 +5,6 @@ export type GridMetrics = {
     centerY: number
 }
 
-export type GridPoint = {
-    column: number
-    row: number
-}
-
-export type FooterLayout = {
-    isCompact: boolean
-    isStacked: boolean
-    topY: number
-    y: number
-}
-
 export type FluidField = {
     columns: number
     rows: number
@@ -29,33 +17,6 @@ export type FluidField = {
     pressure: Float32Array
     divergence: Float32Array
     seed: number
-}
-
-export type TextCell = {
-    column: number
-    row: number
-    character: string
-}
-
-export type GlitchCell = {
-    character: string
-    expiresAt: number
-}
-
-export type GlitchState = Map<string, GlitchCell>
-
-export type LinkTarget = {
-    id: string
-    href: string
-    left: number
-    right: number
-    top: number
-    bottom: number
-}
-
-export type RenderResult = {
-    fluidField: FluidField | null
-    linkTargets: LinkTarget[]
 }
 
 export type PointerState = {

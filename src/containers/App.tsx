@@ -1,20 +1,10 @@
 import {FC, useEffect, useRef} from "react"
-import {FluidField, GlitchState, LinkTarget, PointerState} from "../ascii/types"
-import {drawAsciiLanding, resizeCanvas} from "../ascii/renderer"
-
-const getLinkTargetAtPoint = (linkTargets: LinkTarget[], x: number, y: number): LinkTarget | null => (
-    linkTargets.find(({left, right, top, bottom}) => (
-        x >= left && x <= right && y >= top && y <= bottom
-    )) ?? null
-)
+import {FluidField, PointerState} from "../ascii/types"
+import {drawAsciiBackground, resizeCanvas} from "../ascii/renderer"
 
 const App: FC = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null)
     const fluidFieldRef = useRef<FluidField | null>(null)
-    const glitchStateRef = useRef<GlitchState>(new Map())
-    const hoveredLinkIdRef = useRef<string | null>(null)
-    const linkTargetsRef = useRef<LinkTarget[]>([])
-    const suppressNextClickRef = useRef(false)
     const pointerRef = useRef<PointerState>({
         isInside: false,
         x: 0,
@@ -38,18 +28,14 @@ const App: FC = () => {
 
             previousTimestamp = timestamp
             resizeCanvas(canvas)
-            const renderResult = drawAsciiLanding(
+            fluidFieldRef.current = drawAsciiBackground(
                 canvas,
                 fluidFieldRef.current,
-                glitchStateRef.current,
                 pointerRef.current,
-                hoveredLinkIdRef.current,
                 timestamp / 1000,
                 deltaSeconds,
             )
 
-            fluidFieldRef.current = renderResult.fluidField
-            linkTargetsRef.current = renderResult.linkTargets
             animationFrame = requestAnimationFrame(render)
         }
 
@@ -66,23 +52,6 @@ const App: FC = () => {
                 previousX: previousPointer.isInside ? previousPointer.x : nextX,
                 previousY: previousPointer.isInside ? previousPointer.y : nextY,
             }
-
-            const hoveredLink = getLinkTargetAtPoint(linkTargetsRef.current, nextX, nextY)
-
-            hoveredLinkIdRef.current = hoveredLink?.id ?? null
-            canvas.style.cursor = hoveredLink ? "pointer" : "default"
-        }
-
-        const updatePointerAndOpenLink = (event: PointerEvent): void => {
-            updatePointer(event)
-
-            const pointer = pointerRef.current
-            const linkTarget = getLinkTargetAtPoint(linkTargetsRef.current, pointer.x, pointer.y)
-
-            if (linkTarget) {
-                suppressNextClickRef.current = true
-                window.location.href = linkTarget.href
-            }
         }
 
         const clearPointer = (): void => {
@@ -90,39 +59,17 @@ const App: FC = () => {
                 ...pointerRef.current,
                 isInside: false,
             }
-            hoveredLinkIdRef.current = null
-            canvas.style.cursor = "default"
-        }
-
-        const openHoveredLink = (): void => {
-            if (suppressNextClickRef.current) {
-                suppressNextClickRef.current = false
-
-                return
-            }
-
-            const pointer = pointerRef.current
-            const linkTarget = getLinkTargetAtPoint(linkTargetsRef.current, pointer.x, pointer.y)
-
-            if (linkTarget) {
-                window.location.href = linkTarget.href
-            }
         }
 
         const resizeObserver = new ResizeObserver(() => {
             fluidFieldRef.current = null
-            glitchStateRef.current.clear()
-            linkTargetsRef.current = []
-            hoveredLinkIdRef.current = null
             resizeCanvas(canvas)
         })
 
         resizeObserver.observe(canvas)
         canvas.addEventListener("pointermove", updatePointer)
         canvas.addEventListener("pointerdown", updatePointer)
-        canvas.addEventListener("pointerup", updatePointerAndOpenLink)
         canvas.addEventListener("pointerleave", clearPointer)
-        canvas.addEventListener("click", openHoveredLink)
         window.addEventListener("blur", clearPointer)
         animationFrame = requestAnimationFrame(render)
 
@@ -131,9 +78,7 @@ const App: FC = () => {
             resizeObserver.disconnect()
             canvas.removeEventListener("pointermove", updatePointer)
             canvas.removeEventListener("pointerdown", updatePointer)
-            canvas.removeEventListener("pointerup", updatePointerAndOpenLink)
             canvas.removeEventListener("pointerleave", clearPointer)
-            canvas.removeEventListener("click", openHoveredLink)
             window.removeEventListener("blur", clearPointer)
         }
     }, [])
